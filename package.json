@@ -1,0 +1,34 @@
+{
+  "name": "tv-shows",
+  "version": "0.0.0",
+  "description": "List of TV shows I watch.",
+  "main": "index.js",
+  "keywords": [
+    "tv",
+    "shows",
+    "niksy"
+  ],
+  "author": "Ivan Nikolić <niksy5@gmail.com> (http://ivannikolic.com/)",
+  "license": "MIT",
+  "dependencies": {
+    "JSONStream": "^1.0.4",
+    "format-json-stream": "^0.1.5",
+    "lodash": "^3.10.1",
+    "moment": "^2.10.6",
+    "multistream": "^2.0.2",
+    "request": "^2.61.0",
+    "through2": "^2.0.0"
+  },
+  "bin": {
+    "tv-shows": "cli.js"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/niksy/tv-shows.git"
+  },
+  "bugs": {
+    "url": "https://github.com/niksy/tv-shows/issues"
+  },
+  "homepage": "https://github.com/niksy/tv-shows#readme"
+}
