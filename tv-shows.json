@@ -423,6 +423,15 @@
 		}
 	},
 	{
+		"tvMazeId": 1370,
+		"title": "Marvel's Jessica Jones",
+		"alias": {
+			"download": "Jessica Jones",
+			"epguides": "JessicaJones",
+			"subtitles": "Marvel's_Jessica_Jones"
+		}
+	},
+	{
 		"title": "Crno-bijeli svijet",
 		"alias": {
 			"download": null,
