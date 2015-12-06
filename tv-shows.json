@@ -423,6 +423,15 @@
 		}
 	},
 	{
+		"tvMazeId": 2761,
+		"title": "Master of None",
+		"alias": {
+			"download": "Master of None",
+			"epguides": "MasterofNone",
+			"subtitles": "Master_of_None"
+		}
+	},
+	{
 		"title": "Crno-bijeli svijet",
 		"alias": {
 			"download": null,
