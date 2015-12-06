@@ -1,6 +1,6 @@
 {
   "name": "tv-shows",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "List of TV shows I watch.",
   "main": "index.js",
   "keywords": [
