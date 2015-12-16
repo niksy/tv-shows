@@ -432,6 +432,15 @@
 		}
 	},
 	{
+		"tvMazeId": 1825,
+		"title": "The Expanse",
+		"alias": {
+			"download": "The Expanse",
+			"epguides": "Expanse",
+			"subtitles": "The_Expanse"
+		}
+	},
+	{
 		"title": "Crno-bijeli svijet",
 		"alias": {
 			"download": null,
