@@ -441,6 +441,15 @@
 		}
 	},
 	{
+		"tvMazeId": 1804,
+		"title": "The Man in the High Castle",
+		"alias": {
+			"download": "The Man in the High Castle",
+			"epguides": "ManintheHighCastle",
+			"subtitles": "The_Man_in_the_High_Castle"
+		}
+	},
+	{
 		"title": "Crno-bijeli svijet",
 		"alias": {
 			"download": null,
