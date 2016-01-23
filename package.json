@@ -12,6 +12,7 @@
   "license": "MIT",
   "dependencies": {
     "JSONStream": "^1.0.4",
+    "date-fns": "^1.0.0-rc18",
     "format-json-stream": "^0.1.5",
     "lodash": "^3.10.1",
     "moment": "^2.10.6",

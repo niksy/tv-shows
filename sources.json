@@ -1,14 +1,14 @@
 [
 	{
 		"type": "standard",
-		"url": "http://api.tvmaze.com/schedule?country=US&date={{ YYYY-MM-DD }}"
+		"url": "http://api.tvmaze.com/schedule?country=US&date=<%= date %>"
 	},
 	{
 		"type": "uk",
-		"url": "http://api.tvmaze.com/schedule?country=GB&date={{ YYYY-MM-DD }}"
+		"url": "http://api.tvmaze.com/schedule?country=GB&date=<%= date %>"
 	},
 	{
 		"type": "hrt",
-		"url": "http://raspored.hrt.hr/?raspored=1&mreza=2&datum={{ YYYY-MM-DD }}"
+		"url": "http://raspored.hrt.hr/?raspored=1&mreza=2&datum=<%= date %>"
 	}
 ]
