@@ -13,10 +13,14 @@
   "dependencies": {
     "JSONStream": "^1.0.4",
     "date-fns": "^1.0.0-rc18",
+    "elegant-spinner": "^1.0.1",
     "format-json-stream": "^0.1.5",
+    "inquirer": "^0.11.3",
     "lodash": "^3.10.1",
-    "moment": "^2.10.6",
+    "log-update": "^1.0.2",
+    "meow": "^3.7.0",
     "multistream": "^2.0.2",
+    "opn": "^4.0.0",
     "request": "^2.61.0",
     "through2": "^2.0.0"
   },
