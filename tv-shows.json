@@ -450,6 +450,15 @@
 		}
 	},
 	{
+		"tvMazeId": 1851,
+		"title": "DC's Legends of Tomorrow",
+		"alias": {
+			"download": "Legends of Tomorrow",
+			"epguides": "DCsLegendsofTomorrow",
+			"subtitles": "DC's_Legends_of_Tomorrow"
+		}
+	},
+	{
 		"title": "Crno-bijeli svijet",
 		"alias": {
 			"download": null,
