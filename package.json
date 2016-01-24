@@ -13,6 +13,7 @@
   "dependencies": {
     "JSONStream": "^1.0.4",
     "date-fns": "^1.0.0-rc18",
+    "date.js": "^0.2.1",
     "elegant-spinner": "^1.0.1",
     "format-json-stream": "^0.1.5",
     "inquirer": "^0.11.3",
