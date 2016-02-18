@@ -189,15 +189,6 @@
 		}
 	},
 	{
-		"tvMazeId": 3150,
-		"title": "Childrens Hospital",
-		"alias": {
-			"download": "Childrens Hospital",
-			"epguides": "ChildrensHospital",
-			"subtitles": "Childrens Hospital"
-		}
-	},
-	{
 		"tvMazeId": 175,
 		"title": "House of Cards",
 		"alias": {
