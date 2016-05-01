@@ -2,12 +2,8 @@ var _ = require('lodash');
 var JSONStream = require('JSONStream');
 var through = require('through2');
 var multistream = require('multistream');
-var request = require('request');
-var formatDate = require('date-fns/format');
 var parse = require('./lib/parse');
-var humanizedDate = require('./lib/humanized-date');
 var shows = require('./tv-shows.json');
-var sources = require('./sources.json');
 var getWebChannelShows = require('./lib/get-web-channel-shows');
 var getNetworkShows = require('./lib/get-network-shows');
 

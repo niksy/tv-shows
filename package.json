@@ -1,16 +1,17 @@
 {
-  "name": "tv-shows",
+  "name": "@niksy/tv-shows",
   "version": "0.2.6",
   "description": "List of TV shows I watch.",
   "main": "index.js",
   "private": true,
-  "keywords": [
-    "tv",
-    "shows",
-    "niksy"
-  ],
   "author": "Ivan Nikolić <niksy5@gmail.com> (http://ivannikolic.com/)",
   "license": "MIT",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "eslint {index,lib/*}.js"
+  },
   "dependencies": {
     "JSONStream": "^1.0.4",
     "date-fns": "^1.0.0-rc18",
@@ -28,10 +29,18 @@
     "request": "^2.61.0",
     "through2": "^2.0.0"
   },
+  "devDependencies": {
+    "eslint": "^1.10.3",
+    "eslint-config-niksy": "^1.0.6"
+  },
   "bin": {
     "tv-shows": "cli.js"
   },
-  "devDependencies": {},
+  "keywords": [
+    "tv",
+    "shows",
+    "niksy"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/niksy/tv-shows.git"
