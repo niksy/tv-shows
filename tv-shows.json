@@ -135,15 +135,6 @@
 		}
 	},
 	{
-		"tvMazeId": 588,
-		"title": "NTSF:SD:SUV::",
-		"alias": {
-			"download": "NTSF",
-			"epguides": "NTSFSDSUV",
-			"subtitles": "NTSF"
-		}
-	},
-	{
 		"tvMazeId": 31,
 		"title": "Marvel’s Agents of S.H.I.E.L.D",
 		"alias": {
