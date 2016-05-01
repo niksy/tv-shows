@@ -87,7 +87,8 @@
 			"download": "Sense8",
 			"epguides": "Sense8",
 			"subtitles": "Sense8"
-		}
+		},
+		"webChannelShow": true
 	},
 	{
 		"tvMazeId": 1363,
@@ -186,7 +187,8 @@
 			"download": "House of Cards",
 			"epguides": "HouseofCards",
 			"subtitles": "House of Cards"
-		}
+		},
+		"webChannelShow": true
 	},
 	{
 		"tvMazeId": 620,
@@ -213,7 +215,8 @@
 			"download": "Daredevil",
 			"epguides": "Daredevil",
 			"subtitles": "Daredevil"
-		}
+		},
+		"webChannelShow": true
 	},
 	{
 		"tvMazeId": 5,
@@ -366,7 +369,8 @@
 			"download": "Narcos",
 			"epguides": "Narcos",
 			"subtitles": "Narcos"
-		}
+		},
+		"webChannelShow": true
 	},
 	{
 		"tvMazeId": 216,
@@ -393,7 +397,8 @@
 			"download": "Jessica Jones",
 			"epguides": "JessicaJones",
 			"subtitles": "Marvel's_Jessica_Jones"
-		}
+		},
+		"webChannelShow": true
 	},
 	{
 		"tvMazeId": 2761,
@@ -402,7 +407,8 @@
 			"download": "Master of None",
 			"epguides": "MasterofNone",
 			"subtitles": "Master_of_None"
-		}
+		},
+		"webChannelShow": true
 	},
 	{
 		"tvMazeId": 1825,
@@ -420,7 +426,8 @@
 			"download": "The Man in the High Castle",
 			"epguides": "ManintheHighCastle",
 			"subtitles": "The_Man_in_the_High_Castle"
-		}
+		},
+		"webChannelShow": true
 	},
 	{
 		"tvMazeId": 3603,

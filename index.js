@@ -8,29 +8,8 @@ var parse = require('./lib/parse');
 var humanizedDate = require('./lib/humanized-date');
 var shows = require('./tv-shows.json');
 var sources = require('./sources.json');
-
-/**
- * @param  {Object[]} sources
- * @param  {Date[]} dates
- *
- * @return {Array}
- */
-function getShows ( sources, dates ) {
-
-	return _.chain(sources)
-		.map(function ( source ) {
-			if ( source.type === 'hrt' ) {
-				return null;
-			}
-			return _.map(dates, function ( date ) {
-				return request(_.template(source.url)({ date: formatDate(date, 'YYYY-MM-DD') }));
-			});
-		})
-		.compact()
-		.flatten()
-		.value();
-
-}
+var getWebChannelShows = require('./lib/get-web-channel-shows');
+var getNetworkShows = require('./lib/get-network-shows');
 
 /**
  * @param  {Date[]} dates
@@ -45,7 +24,10 @@ module.exports = function ( dates ) {
 		throw new Error('Date isn’t provided.');
 	}
 
-	return multistream(getShows(sources, dates))
+	return multistream([].concat(
+			getNetworkShows(dates),
+			getWebChannelShows(dates)
+		))
 		.pipe(JSONStream.parse('*'))
 		.pipe(through.obj(function ( data, enc, end ) {
 			var parsed = parse({
