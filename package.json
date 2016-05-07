@@ -14,6 +14,8 @@
   },
   "dependencies": {
     "JSONStream": "^1.0.4",
+    "addic7ed-api": "niksy/addic7ed-api#parser-refactor",
+    "chalk": "^1.1.1",
     "columnify": "^1.5.4",
     "date-fns": "^1.0.0-rc18",
     "date.js": "^0.2.1",
@@ -28,9 +30,10 @@
     "meow": "^3.7.0",
     "multistream": "^2.0.2",
     "opn": "^4.0.0",
-    "pretty-date": "^0.2.0",
     "pify": "^2.3.0",
+    "pretty-date": "^0.2.0",
     "request": "^2.61.0",
+    "run-applescript": "^3.0.0",
     "through2": "^2.0.0"
   },
   "devDependencies": {
