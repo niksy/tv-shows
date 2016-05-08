@@ -1,6 +1,6 @@
 {
   "name": "@niksy/tv-shows",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "description": "List of TV shows I watch.",
   "main": "index.js",
   "private": true,
