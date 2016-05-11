@@ -14,15 +14,15 @@ var getNetworkShows = require('./lib/get-network-shows');
  */
 module.exports = function ( dates ) {
 
-	dates = _.compact([].concat(dates));
+	var compactDates = _.compact([].concat(dates));
 
-	if ( !dates.length ) {
+	if ( !compactDates.length ) {
 		throw new Error('Date isn’t provided.');
 	}
 
 	return multistream([].concat(
-			getNetworkShows(dates),
-			getWebChannelShows(dates)
+			getNetworkShows(compactDates),
+			getWebChannelShows(compactDates)
 		))
 		.pipe(JSONStream.parse('*'))
 		.pipe(through.obj(function ( data, enc, end ) {

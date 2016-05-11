@@ -3,14 +3,15 @@
 var JSONStream = require('JSONStream');
 var format = require('format-json-stream');
 var meow = require('meow');
+var spinner = require('ora')();
 var humanizedDate = require('./lib/humanized-date');
 var interactivePrompt = require('./lib/cli/interactive-prompt');
-var spinner = require('./lib/spinner');
 var shows = require('./');
 var fetchedShows = [];
 var stream, cli;
 
 process.stdin.on('keypress', function ( ch, key ) {
+	/* eslint-disable no-process-exit */
 	if ( key && key.name === 'escape' ) {
 		process.exit();
 	}
@@ -22,7 +23,7 @@ cli = meow([
 	'',
 	'Options',
 	'  -o, --output-json  Output results as JSON',
-	'  -d, --date [human date]  Display TV shows for given date(s)',
+	'  -d, --date [human date]  Display TV shows for given date(s)'
 ].join('\n'), {
 	alias: {
 		o: 'output-json',

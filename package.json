@@ -30,11 +30,13 @@
     "meow": "^3.7.0",
     "multistream": "^2.0.2",
     "opn": "^4.0.0",
+    "ora": "^0.2.1",
     "pify": "^2.3.0",
     "pretty-date": "^0.2.0",
     "request": "^2.61.0",
     "run-applescript": "^3.0.0",
-    "through2": "^2.0.0"
+    "through2": "^2.0.0",
+    "truncate-middle": "^1.0.3"
   },
   "devDependencies": {
     "eslint": "^1.10.3",
