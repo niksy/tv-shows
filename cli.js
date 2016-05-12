@@ -10,13 +10,6 @@ var shows = require('./');
 var fetchedShows = [];
 var stream, cli;
 
-process.stdin.on('keypress', function ( ch, key ) {
-	/* eslint-disable no-process-exit */
-	if ( key && key.name === 'escape' ) {
-		process.exit();
-	}
-});
-
 cli = meow([
 	'Usage',
 	'  $ tv-shows',
