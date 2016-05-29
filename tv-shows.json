@@ -430,6 +430,15 @@
 		}
 	},
 	{
+		"tvMazeId": 3144,
+		"title": "Preacher",
+		"alias": {
+			"download": "Preacher",
+			"epguides": "Preacher",
+			"subtitles": "Preacher"
+		}
+	},
+	{
 		"title": "Crno-bijeli svijet",
 		"alias": {
 			"download": null,
