@@ -47,7 +47,7 @@ function getEpisodesFromStream ( episodesStream ) {
 
 cli = meow([
 	'Usage',
-	'  $ tv-shows',
+	'  $ tv-shows [options]',
 	'',
 	'Options',
 	'  -o, --output-json  Output results as JSON',
