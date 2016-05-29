@@ -48,6 +48,10 @@ if ( cli.flags.outputJson ) {
 			fetchedShows.push(data);
 		})
 		.on('end', function () {
+			if ( !fetchedShows.length ) {
+				console.log('No shows available.');
+				return;
+			}
 			interactivePrompt(fetchedShows);
 		});
 
