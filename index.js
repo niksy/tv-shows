@@ -4,26 +4,13 @@ var through = require('through2');
 var multistream = require('multistream');
 var parse = require('./lib/parse');
 var shows = require('./tv-shows.json');
+var getShow = require('./lib/get-show');
 var getWebChannelShows = require('./lib/get-web-channel-shows');
 var getNetworkShows = require('./lib/get-network-shows');
 
-/**
- * @param  {Date[]} dates
- *
- * @return {Stream}
- */
-module.exports = function ( dates ) {
+function parseStream ( stream ) {
 
-	var compactDates = _.compact([].concat(dates));
-
-	if ( !compactDates.length ) {
-		throw new Error('Date isn’t provided.');
-	}
-
-	return multistream([].concat(
-			getNetworkShows(compactDates),
-			getWebChannelShows(compactDates)
-		))
+	return stream
 		.pipe(JSONStream.parse('*'))
 		.pipe(through.obj(function ( data, enc, end ) {
 			var parsed = parse({
@@ -42,5 +29,38 @@ module.exports = function ( dates ) {
 			}, this);
 			end();
 		}));
+
+}
+
+module.exports = {
+
+	/**
+	 * @param  {String} showId
+	 *
+	 * @return {Stream}
+	 */
+	byId: function ( showId ) {
+		return parseStream(getShow(showId));
+	},
+
+	/**
+	 * @param  {Date[]} dates
+	 *
+	 * @return {Stream}
+	 */
+	byDate: function ( dates ) {
+
+		var compactDates = _.compact([].concat(dates));
+
+		if ( !compactDates.length ) {
+			throw new Error('Date isn’t provided.');
+		}
+
+		return parseStream(multistream([].concat(
+			getNetworkShows(compactDates),
+			getWebChannelShows(compactDates)
+		)));
+
+	}
 
 };

@@ -1,14 +1,49 @@
 #!/usr/bin/env node
 
+var _ = require('lodash');
 var JSONStream = require('JSONStream');
 var format = require('format-json-stream');
 var meow = require('meow');
 var spinner = require('ora')();
 var humanizedDate = require('./lib/humanized-date');
 var interactivePrompt = require('./lib/cli/interactive-prompt');
-var shows = require('./');
-var fetchedShows = [];
+var getShows = require('./');
 var stream, cli;
+
+/**
+ * @param  {Stream} waitedStream
+ */
+function waitForStream ( waitedStream ) {
+	spinner.start();
+	waitedStream
+		.on('end', function () {
+			spinner.stop();
+		});
+}
+
+/**
+ * @param  {Stream} episodesStream
+ */
+function getEpisodesFromStream ( episodesStream ) {
+
+	var fetchedEpisodes = [];
+	return new Promise(function ( resolve ) {
+
+		episodesStream
+			.on('data', function ( data ) {
+				fetchedEpisodes.push(data);
+			})
+			.on('end', function () {
+				if ( !fetchedEpisodes.length ) {
+					console.log('No TV show episodes available.');
+					return;
+				}
+				resolve(fetchedEpisodes);
+			});
+
+	});
+
+}
 
 cli = meow([
 	'Usage',
@@ -16,43 +51,59 @@ cli = meow([
 	'',
 	'Options',
 	'  -o, --output-json  Output results as JSON',
-	'  -d, --date [human date]  Display TV shows for given date(s)'
+	'  -d, --date [human date]  Display TV shows for given date(s)',
+	'  -s, --choose-show  Choose TV show regardless of date'
 ].join('\n'), {
 	alias: {
 		o: 'output-json',
 		d: 'date',
+		s: 'choose-show',
 		v: 'version',
 		h: 'help'
 	}
 });
 
-stream = shows(humanizedDate(cli.flags.date || 'yesterday'));
+if ( cli.flags.chooseShow ) {
 
-spinner.start();
-stream
-	.on('end', function () {
-		spinner.stop();
-	});
-
-if ( cli.flags.outputJson ) {
-
-	stream
-		.pipe(JSONStream.stringify())
-		.pipe(format())
-		.pipe(process.stdout);
+	interactivePrompt.chooseShowFromList()
+		.then(function ( answers ) {
+			stream = getShows.byId(answers.showId);
+			waitForStream(stream);
+			getEpisodesFromStream(stream)
+				.then(function ( episodes ) {
+					return _.sortByOrder(_.sortByOrder(episodes, function ( item ) {
+						return item.episode.number;
+					}, ['desc']), function ( item ) {
+						return item.episode.season;
+					}, ['desc']);
+				})
+				.then(function ( episodes ) {
+					interactivePrompt.chooseEpisodeForShow(episodes);
+				});
+		});
 
 } else {
 
-	stream
-		.on('data', function ( data ) {
-			fetchedShows.push(data);
-		})
-		.on('end', function () {
-			if ( !fetchedShows.length ) {
-				console.log('No shows available.');
-				return;
-			}
-			interactivePrompt(fetchedShows);
-		});
+	stream = getShows.byDate(humanizedDate(cli.flags.date || 'yesterday'));
+	waitForStream(stream);
+
+	if ( cli.flags.outputJson ) {
+
+		stream
+			.pipe(JSONStream.stringify())
+			.pipe(format())
+			.pipe(process.stdout);
+
+	} else {
+
+		getEpisodesFromStream(stream)
+			.then(function ( episodes ) {
+				return _.sortByOrder(episodes, ['title'], ['asc']);
+			})
+			.then(function ( episodes ) {
+				interactivePrompt.chooseEpisodeForShow(episodes);
+			});
+
+	}
 
 }

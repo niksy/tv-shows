@@ -21,7 +21,6 @@
     "date.js": "^0.2.1",
     "elegant-spinner": "^1.0.1",
     "format-json-stream": "^0.1.5",
-    "from2": "^2.1.1",
     "inquirer": "^0.11.3",
     "kickass-torrent": "0.0.3",
     "lodash": "^3.10.1",
@@ -35,6 +34,7 @@
     "pretty-date": "^0.2.0",
     "request": "^2.61.0",
     "run-applescript": "^3.0.0",
+    "stream-from-promise": "^1.0.0",
     "through2": "^2.0.0",
     "truncate-middle": "^1.0.3"
   },
