@@ -23,6 +23,8 @@ function waitForStream ( waitedStream ) {
 
 /**
  * @param  {Stream} episodesStream
+ *
+ * @return {Promise}
  */
 function getEpisodesFromStream ( episodesStream ) {
 
@@ -69,7 +71,7 @@ if ( cli.flags.chooseShow ) {
 		.then(function ( answers ) {
 			stream = getShows.byId(answers.showId);
 			waitForStream(stream);
-			getEpisodesFromStream(stream)
+			return getEpisodesFromStream(stream)
 				.then(function ( episodes ) {
 					return _.sortByOrder(_.sortByOrder(episodes, function ( item ) {
 						return item.episode.number;
@@ -79,7 +81,11 @@ if ( cli.flags.chooseShow ) {
 				})
 				.then(function ( episodes ) {
 					interactivePrompt.chooseEpisodeForShow(episodes);
+					return episodes;
 				});
+		})
+		.catch(function ( err ) {
+			console.log(err);
 		});
 
 } else {
@@ -102,6 +108,10 @@ if ( cli.flags.chooseShow ) {
 			})
 			.then(function ( episodes ) {
 				interactivePrompt.chooseEpisodeForShow(episodes);
+				return episodes;
+			})
+			.catch(function ( err ) {
+				console.log(err);
 			});
 
 	}

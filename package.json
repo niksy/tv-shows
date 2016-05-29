@@ -10,7 +10,7 @@
     "tv-shows": "cli.js"
   },
   "scripts": {
-    "test": "eslint index.js"
+    "test": "eslint {index,cli,lib/**/*}.js"
   },
   "dependencies": {
     "JSONStream": "^1.0.4",
