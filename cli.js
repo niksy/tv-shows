@@ -8,6 +8,7 @@ var spinner = require('ora')();
 var humanizedDate = require('./lib/humanized-date');
 var interactivePrompt = require('./lib/cli/interactive-prompt');
 var getShows = require('./');
+var shows = require('./tv-shows.json');
 var stream, cli;
 
 /**
@@ -67,7 +68,7 @@ cli = meow([
 
 if ( cli.flags.chooseShow ) {
 
-	interactivePrompt.chooseShowFromList()
+	interactivePrompt.chooseShowFromList(_.sortByOrder(shows, ['title'], ['asc']))
 		.then(function ( answers ) {
 			stream = getShows.byId(answers.showId);
 			waitForStream(stream);
