@@ -246,15 +246,6 @@
 		}
 	},
 	{
-		"tvMazeId": 16,
-		"title": "Penny Dreadful",
-		"alias": {
-			"download": "Penny Dreadful",
-			"epguides": "PennyDreadful",
-			"subtitles": "Penny Dreadful"
-		}
-	},
-	{
 		"tvMazeId": 191,
 		"title": "Halt and Catch Fire",
 		"alias": {
