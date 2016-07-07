@@ -403,15 +403,6 @@
 		"webChannelShow": true
 	},
 	{
-		"tvMazeId": 3603,
-		"title": "Vinyl",
-		"alias": {
-			"download": "Vinyl",
-			"epguides": "Vinyl",
-			"subtitles": "Vinyl"
-		}
-	},
-	{
 		"tvMazeId": 3144,
 		"title": "Preacher",
 		"alias": {
