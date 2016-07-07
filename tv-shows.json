@@ -412,6 +412,15 @@
 		}
 	},
 	{
+		"tvMazeId": 312,
+		"title": "You're the Worst",
+		"alias": {
+			"download": "Youre The Worst",
+			"epguides": "YouretheWorst",
+			"subtitles": "You're the Worst (2014)"
+		}
+	},
+	{
 		"title": "Crno-bijeli svijet",
 		"alias": {
 			"download": null,
