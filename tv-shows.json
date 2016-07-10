@@ -421,6 +421,15 @@
 		}
 	},
 	{
+		"tvMazeId": 14157,
+		"title": "The Night Of",
+		"alias": {
+			"download": "The Night Of",
+			"epguides": "Nightof",
+			"subtitles": "The_Night_Of"
+		}
+	},
+	{
 		"title": "Crno-bijeli svijet",
 		"alias": {
 			"download": null,
