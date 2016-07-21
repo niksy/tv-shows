@@ -23,6 +23,7 @@
     "format-json-stream": "^0.1.5",
     "inquirer": "^0.11.3",
     "kickass-torrent": "0.0.3",
+    "leetxapi": "^1.1.1",
     "lodash": "^3.10.1",
     "log-update": "^1.0.2",
     "magnet-link": "^1.0.4",
