@@ -430,6 +430,24 @@
 		}
 	},
 	{
+		"tvMazeId": 2993,
+		"title": "Stranger Things",
+		"alias": {
+			"download": "Stranger Things",
+			"epguides": "StrangerThings",
+			"subtitles": "Stranger_Things"
+		}
+	},
+	{
+		"tvMazeId": 3605,
+		"title": "Vice Principals",
+		"alias": {
+			"download": "Vice Principals",
+			"epguides": "VicePrincipals",
+			"subtitles": "Vice_Principals"
+		}
+	},
+	{
 		"title": "Crno-bijeli svijet",
 		"alias": {
 			"download": null,
