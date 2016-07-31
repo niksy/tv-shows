@@ -69,7 +69,8 @@
 			"download": "Shameless (US)",
 			"epguides": "Shameless_US",
 			"subtitles": "Shameless (US)"
-		}
+		},
+		"tvMazeTitleAlias": "Shameless (US)"
 	},
 	{
 		"tvMazeId": 82,
@@ -288,7 +289,8 @@
 			"download": "Star Wars: REBELS",
 			"epguides": "StarWarsREBELS",
 			"subtitles": "Star_Wars_REBELS"
-		}
+		},
+		"tvMazeTitleAlias": "Star Wars REBELS"
 	},
 	{
 		"tvMazeId": 13,
@@ -365,7 +367,7 @@
 	},
 	{
 		"tvMazeId": 1370,
-		"title": "Marvel's Jessica Jones",
+		"title": "Marvel’s Jessica Jones",
 		"alias": {
 			"download": "Jessica Jones",
 			"epguides": "JessicaJones",
@@ -413,7 +415,7 @@
 	},
 	{
 		"tvMazeId": 312,
-		"title": "You're the Worst",
+		"title": "You’re the Worst",
 		"alias": {
 			"download": "Youre The Worst",
 			"epguides": "YouretheWorst",
