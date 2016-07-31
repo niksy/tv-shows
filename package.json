@@ -40,9 +40,8 @@
     "truncate-middle": "^1.0.3"
   },
   "devDependencies": {
-    "eslint": "^2.9.0",
-    "eslint-config-niksy": "^2.0.0",
-    "eslint-plugin-promise": "^1.1.0"
+    "eslint": "^3.1.1",
+    "eslint-config-niksy": "^3.0.1"
   },
   "engines": {
     "node": ">=4"
