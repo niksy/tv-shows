@@ -450,6 +450,15 @@
 		}
 	},
 	{
+		"tvMazeId": 2162,
+		"title": "The Get Down",
+		"alias": {
+			"download": "The Get Down",
+			"epguides": "GetDown",
+			"subtitles": "The_Get_Down"
+		}
+	},
+	{
 		"title": "Crno-bijeli svijet",
 		"alias": {
 			"download": null,
