@@ -1,14 +1,5 @@
 [
 	{
-		"tvMazeId": 183,
-		"title": "Tyrant",
-		"alias": {
-			"download": "Tyrant",
-			"epguides": "Tyrant",
-			"subtitles": "Tyrant"
-		}
-	},
-	{
 		"tvMazeId": 1871,
 		"title": "Mr. Robot",
 		"alias": {
@@ -317,15 +308,6 @@
 			"download": "Man Seeking Woman",
 			"epguides": "ManSeekingWoman",
 			"subtitles": "Man Seeking Woman"
-		}
-	},
-	{
-		"tvMazeId": 1846,
-		"title": "Sex&Drugs&Rock&Roll",
-		"alias": {
-			"download": "Sex&Drugs&Rock&Roll",
-			"epguides": "Sex&Drugs&Rock&Roll",
-			"subtitles": "Sex&Drugs&Rock&Roll"
 		}
 	},
 	{
