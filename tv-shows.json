@@ -441,6 +441,15 @@
 		}
 	},
 	{
+		"tvMazeId": 6508,
+		"title": "Atlanta",
+		"alias": {
+			"download": "Atlanta",
+			"epguides": "Atlanta",
+			"subtitles": "Atlanta"
+		}
+	},
+	{
 		"title": "Crno-bijeli svijet",
 		"alias": {
 			"download": null,
