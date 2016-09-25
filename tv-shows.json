@@ -450,6 +450,15 @@
 		}
 	},
 	{
+		"tvMazeId": 2790,
+		"title": "The Good Place",
+		"alias": {
+			"download": "The Good Place",
+			"epguides": "GoodPlace",
+			"subtitles": "The Good Place"
+		}
+	},
+	{
 		"title": "Crno-bijeli svijet",
 		"alias": {
 			"download": null,
