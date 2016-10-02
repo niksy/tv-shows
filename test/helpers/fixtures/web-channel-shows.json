@@ -1,0 +1,224 @@
+[
+	{
+		"id": 12664,
+		"url": "http://www.tvmaze.com/episodes/12664/house-of-cards-1x01-chapter-1",
+		"name": "Chapter 1",
+		"season": 1,
+		"number": 1,
+		"airdate": "2013-02-01",
+		"airtime": "",
+		"airstamp": "2013-02-01T12:00:00+00:00",
+		"runtime": 60,
+		"image": {
+			"medium": "http://tvmazecdn.com/uploads/images/medium_landscape/16/40318.jpg",
+			"original": "http://tvmazecdn.com/uploads/images/original_untouched/16/40318.jpg"
+		},
+		"summary": "<p>Allegiances are abandoned after a promise is broken in the opener of this drama, which follows a ruthless congressman and his equally ambitious wife as they navigate the corridors of power in Washington, D.C.</p>",
+		"_links": {
+			"self": {
+				"href": "http://api.tvmaze.com/episodes/12664"
+			}
+		},
+		"show": {
+			"id": 175,
+			"url": "http://www.tvmaze.com/shows/175/house-of-cards",
+			"name": "House of Cards",
+			"type": "Scripted",
+			"language": "English",
+			"genres": [
+				"Drama",
+				"Thriller"
+			],
+			"status": "Running",
+			"runtime": 60,
+			"premiered": "2013-02-01",
+			"schedule": {
+				"time": "",
+				"days": [
+					"Friday"
+				]
+			},
+			"rating": {
+				"average": 8.7
+			},
+			"weight": 4,
+			"network": null,
+			"webChannel": {
+				"id": 1,
+				"name": "Netflix",
+				"country": {
+					"name": "United States",
+					"code": "US",
+					"timezone": "America/New_York"
+				}
+			},
+			"externals": {
+				"tvrage": 27822,
+				"thetvdb": 262980,
+				"imdb": "tt1856010"
+			},
+			"image": {
+				"medium": "http://tvmazecdn.com/uploads/images/medium_portrait/0/2460.jpg",
+				"original": "http://tvmazecdn.com/uploads/images/original_untouched/0/2460.jpg"
+			},
+			"summary": "<p>A Congressman works with his equally conniving wife to exact revenge on the people who betrayed him.</p>",
+			"updated": 1464275795,
+			"_links": {
+				"self": {
+					"href": "http://api.tvmaze.com/shows/175"
+				},
+				"previousepisode": {
+					"href": "http://api.tvmaze.com/episodes/535325"
+				}
+			}
+		}
+	},
+	{
+		"id": 12665,
+		"url": "http://www.tvmaze.com/episodes/12665/house-of-cards-1x02-chapter-2",
+		"name": "Chapter 2",
+		"season": 1,
+		"number": 2,
+		"airdate": "2013-02-01",
+		"airtime": "",
+		"airstamp": "2013-02-01T12:00:00+00:00",
+		"runtime": 60,
+		"image": {
+			"medium": "http://tvmazecdn.com/uploads/images/medium_landscape/16/40319.jpg",
+			"original": "http://tvmazecdn.com/uploads/images/original_untouched/16/40319.jpg"
+		},
+		"summary": "<p>Francis attacks the White House through the media; Claire makes a cruel decision.</p>",
+		"_links": {
+			"self": {
+				"href": "http://api.tvmaze.com/episodes/12665"
+			}
+		},
+		"show": {
+			"id": 175,
+			"url": "http://www.tvmaze.com/shows/175/house-of-cards",
+			"name": "House of Cards",
+			"type": "Scripted",
+			"language": "English",
+			"genres": [
+				"Drama",
+				"Thriller"
+			],
+			"status": "Running",
+			"runtime": 60,
+			"premiered": "2013-02-01",
+			"schedule": {
+				"time": "",
+				"days": [
+					"Friday"
+				]
+			},
+			"rating": {
+				"average": 8.7
+			},
+			"weight": 4,
+			"network": null,
+			"webChannel": {
+				"id": 1,
+				"name": "Netflix",
+				"country": {
+					"name": "United States",
+					"code": "US",
+					"timezone": "America/New_York"
+				}
+			},
+			"externals": {
+				"tvrage": 27822,
+				"thetvdb": 262980,
+				"imdb": "tt1856010"
+			},
+			"image": {
+				"medium": "http://tvmazecdn.com/uploads/images/medium_portrait/0/2460.jpg",
+				"original": "http://tvmazecdn.com/uploads/images/original_untouched/0/2460.jpg"
+			},
+			"summary": "<p>A Congressman works with his equally conniving wife to exact revenge on the people who betrayed him.</p>",
+			"updated": 1464275795,
+			"_links": {
+				"self": {
+					"href": "http://api.tvmaze.com/shows/175"
+				},
+				"previousepisode": {
+					"href": "http://api.tvmaze.com/episodes/535325"
+				}
+			}
+		}
+	},
+	{
+		"id": 12666,
+		"url": "http://www.tvmaze.com/episodes/12666/house-of-cards-1x03-chapter-3",
+		"name": "Chapter 3",
+		"season": 1,
+		"number": 3,
+		"airdate": "2013-02-01",
+		"airtime": "",
+		"airstamp": "2013-02-01T12:00:00+00:00",
+		"runtime": 60,
+		"image": {
+			"medium": "http://tvmazecdn.com/uploads/images/medium_landscape/16/40320.jpg",
+			"original": "http://tvmazecdn.com/uploads/images/original_untouched/16/40320.jpg"
+		},
+		"summary": "<p>Francis deals with a crisis in his home district; Zoe experiences the politics of journalism.</p>",
+		"_links": {
+			"self": {
+				"href": "http://api.tvmaze.com/episodes/12666"
+			}
+		},
+		"show": {
+			"id": 175,
+			"url": "http://www.tvmaze.com/shows/175/house-of-cards",
+			"name": "House of Cards",
+			"type": "Scripted",
+			"language": "English",
+			"genres": [
+				"Drama",
+				"Thriller"
+			],
+			"status": "Running",
+			"runtime": 60,
+			"premiered": "2013-02-01",
+			"schedule": {
+				"time": "",
+				"days": [
+					"Friday"
+				]
+			},
+			"rating": {
+				"average": 8.7
+			},
+			"weight": 4,
+			"network": null,
+			"webChannel": {
+				"id": 1,
+				"name": "Netflix",
+				"country": {
+					"name": "United States",
+					"code": "US",
+					"timezone": "America/New_York"
+				}
+			},
+			"externals": {
+				"tvrage": 27822,
+				"thetvdb": 262980,
+				"imdb": "tt1856010"
+			},
+			"image": {
+				"medium": "http://tvmazecdn.com/uploads/images/medium_portrait/0/2460.jpg",
+				"original": "http://tvmazecdn.com/uploads/images/original_untouched/0/2460.jpg"
+			},
+			"summary": "<p>A Congressman works with his equally conniving wife to exact revenge on the people who betrayed him.</p>",
+			"updated": 1464275795,
+			"_links": {
+				"self": {
+					"href": "http://api.tvmaze.com/shows/175"
+				},
+				"previousepisode": {
+					"href": "http://api.tvmaze.com/episodes/535325"
+				}
+			}
+		}
+	}
+]

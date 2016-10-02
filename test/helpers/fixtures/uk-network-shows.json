@@ -1,0 +1,77 @@
+[
+	{
+		"id": 32186,
+		"url": "http://www.tvmaze.com/episodes/32186/sherlock-3x03-his-last-vow",
+		"name": "His Last Vow",
+		"season": 3,
+		"number": 3,
+		"airdate": "2014-01-12",
+		"airtime": "22:00",
+		"airstamp": "2014-01-12T22:00:00+00:00",
+		"runtime": 90,
+		"image": {
+			"medium": "http://tvmazecdn.com/uploads/images/medium_landscape/13/34296.jpg",
+			"original": "http://tvmazecdn.com/uploads/images/original_untouched/13/34296.jpg"
+		},
+		"summary": "<p>Learn how Conan Doyle's Victorian super-sleuth became the hit television show \"Sherlock.\"</p>",
+		"show": {
+			"id": 335,
+			"url": "http://www.tvmaze.com/shows/335/sherlock",
+			"name": "Sherlock",
+			"type": "Scripted",
+			"language": "English",
+			"genres": [
+				"Drama",
+				"Crime",
+				"Mystery"
+			],
+			"status": "Running",
+			"runtime": 90,
+			"premiered": "2010-07-25",
+			"schedule": {
+				"time": "21:00",
+				"days": [
+					"Sunday"
+				]
+			},
+			"rating": {
+				"average": 9.3
+			},
+			"weight": 5,
+			"network": {
+				"id": 12,
+				"name": "BBC One",
+				"country": {
+					"name": "United Kingdom",
+					"code": "GB",
+					"timezone": "Europe/London"
+				}
+			},
+			"webChannel": null,
+			"externals": {
+				"tvrage": 23433,
+				"thetvdb": 176941,
+				"imdb": "tt1475582"
+			},
+			"image": {
+				"medium": "http://tvmazecdn.com/uploads/images/medium_portrait/2/5311.jpg",
+				"original": "http://tvmazecdn.com/uploads/images/original_untouched/2/5311.jpg"
+			},
+			"summary": "<p>Sherlock Holmes and Dr John Watson's adventures in 21st Century London. A thrilling, funny, fast-paced contemporary reimagining of the Arthur Conan Doyle classic.</p>",
+			"updated": 1472820200,
+			"_links": {
+				"self": {
+					"href": "http://api.tvmaze.com/shows/335"
+				},
+				"previousepisode": {
+					"href": "http://api.tvmaze.com/episodes/32186"
+				}
+			}
+		},
+		"_links": {
+			"self": {
+				"href": "http://api.tvmaze.com/episodes/32186"
+			}
+		}
+	}
+]

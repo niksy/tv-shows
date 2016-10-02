@@ -1,29 +1,136 @@
 # tv-shows
 
-List of TV shows I watch. **Primarily used via CLI interface.**
+[![Build Status][ci-img]][ci]
+
+Personal TV shows manager.
 
 ## Install
 
 ```sh
-npm install tv-shows --save
+npm install niksy/tv-shows --save
 ```
 
 ## Usage
 
-```sh
-tv-shows
+```js
+var Manager = require('@niksy/tv-shows');
+var manager = new Manager([
+	{
+		title: 'Game of Thrones',
+		tvmazeId: 82,
+		addic7edId: 1245,
+		searchQuery: [
+			'game of thrones',
+			'of thrones'
+		]
+	},
+	// ...
+]);
 
-  List of TV shows I watch.
+manager.getEpisodesByDate(new Date());
+manager.getEpisodesByShowId(82);
+/* [
+	{
+		show: {
+			title: 'Game of Thrones',
+			webChannel: false,
+			tvmazeId: 82,
+			addic7edId: 1245,
+			searchQuery: [
+				'game of thrones',
+				'of thrones'
+			]
+		},
+		season: 6
+		number: 4,
+		title: 'Book of the Stranger'
+	},
+	// ...
+] */
+```
 
-  Usage
-    $ tv-shows [options]
+## API
 
-  Options
-    -o, --output-json  Output results as JSON
-    -d, --date [human date]  Display TV shows for given date(s)
-    -s, --choose-show  Choose TV show regardless of date
+### manager.getEpisodesByDate(date)
+
+Returns: `Promise`
+
+Gets TV shows [episodes](#episode-api) schedule by given date.
+
+#### date
+
+Type: `Date`
+
+Schedule date.
+
+### manager.getEpisodesByShowId(id)
+
+Returns: `Promise`
+
+Gets TV shows [episodes](#episode-api) by given [TVmaze][tvmaze] show ID.
+
+#### id
+
+Type: `Number`
+
+[TVmaze][tvmaze] show ID.
+
+## Episode API
+
+Every episode is instance of `Episode` class with methods for getting list of torrents and subtitles.
+
+### episode.getTorrents()
+
+Returns: `Promise`
+
+Gets list of torrents for episode. Consumes APIs for several torrent trackers and sensibly sorts them:
+
+* PROPER releases are at the top
+* Torrents with larger number of seeds are at the top
+* Duplicate torrents (based on Magnet hash) are removed
+
+### episode.getSubtitles()
+
+Returns: `Promise`
+
+Gets list of subtitles from [Addic7ed.com][addic7ed] for episode. Sorts list where:
+
+* Entries with larger number of downloads are at the top
+
+## Show configuration
+
+Every show is JSON object with following properties:
+
+| Property | Type | Description |
+| --- | --- | --- | --- |
+| `title` | `String` | Show title. |
+| `webChannel` | `Boolean` | Is the show web channel show (e.g. Netflix production) or standard network show. |
+| `tvmazeId` | `Number` | [TVmaze][tvmaze] show ID. |
+| `addic7edId` | `Number` | [Addic7ed.com][addic7ed] show ID. |
+| `searchQuery` | `String[]` | List of search queries used to search torrent trackers. |
+
+### Example
+
+```json
+[
+	{
+		"title": "Game of Thrones",
+		"webChannel": false,
+		"tvmazeId": 123,
+		"addic7edId": 456,
+		"searchQuery": [
+			"game of thrones",
+			"of thrones"
+		]
+	}
+]
 ```
 
 ## License
 
 MIT © [Ivan Nikolić](http://ivannikolic.com)
+
+[ci]: https://travis-ci.org/niksy/tv-shows
+[ci-img]: https://img.shields.io/travis/niksy/tv-shows.svg
+[addic7ed]: http://www.addic7ed.com/
+[tvmaze]: http://www.tvmaze.com/

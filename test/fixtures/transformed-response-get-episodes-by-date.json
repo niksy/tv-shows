@@ -1,0 +1,687 @@
+[
+	{
+		"id": 664674,
+		"url": "http://www.tvmaze.com/episodes/664674/game-of-thrones-6x04-book-of-the-stranger",
+		"name": "Book of the Stranger",
+		"season": 6,
+		"number": 4,
+		"airdate": "2016-05-15",
+		"airtime": "21:00",
+		"airstamp": "2016-05-15T21:00:00-04:00",
+		"runtime": 60,
+		"image": {
+			"medium": "http://tvmazecdn.com/uploads/images/medium_landscape/56/142273.jpg",
+			"original": "http://tvmazecdn.com/uploads/images/original_untouched/56/142273.jpg"
+		},
+		"summary": "<p>Tyrion strikes a deal. Jorah and Daario undertake a difficult task. Jaime and Cersei try to improve their situation.</p>",
+		"show": {
+			"id": 82,
+			"url": "http://www.tvmaze.com/shows/82/game-of-thrones",
+			"name": "Game of Thrones",
+			"type": "Scripted",
+			"language": "English",
+			"genres": [
+				"Drama",
+				"Adventure",
+				"Fantasy"
+			],
+			"status": "Running",
+			"runtime": 60,
+			"premiered": "2011-04-17",
+			"schedule": {
+				"time": "21:00",
+				"days": [
+					"Sunday"
+				]
+			},
+			"rating": {
+				"average": 9.3
+			},
+			"weight": 16,
+			"network": {
+				"id": 8,
+				"name": "HBO",
+				"country": {
+					"name": "United States",
+					"code": "US",
+					"timezone": "America/New_York"
+				}
+			},
+			"webChannel": null,
+			"externals": {
+				"tvrage": 24493,
+				"thetvdb": 121361,
+				"imdb": "tt0944947"
+			},
+			"image": {
+				"medium": "http://tvmazecdn.com/uploads/images/medium_portrait/53/132622.jpg",
+				"original": "http://tvmazecdn.com/uploads/images/original_untouched/53/132622.jpg"
+			},
+			"summary": "<p>Based on the bestselling book series <em>A Song of Ice and Fire</em> by George R.R. Martin, this sprawling new HBO drama is set in a world where summers span decades and winters can last a lifetime. From the scheming south and the savage eastern lands, to the frozen north and ancient Wall that protects the realm from the mysterious darkness beyond, the powerful families of the Seven Kingdoms are locked in a battle for the Iron Throne. This is a story of duplicity and treachery, nobility and honor, conquest and triumph. In the <em>\"Game of Thrones\"</em>, you either win or you die.</p>",
+			"updated": 1472893022,
+			"_links": {
+				"self": {
+					"href": "http://api.tvmaze.com/shows/82"
+				},
+				"previousepisode": {
+					"href": "http://api.tvmaze.com/episodes/729575"
+				}
+			}
+		},
+		"_links": {
+			"self": {
+				"href": "http://api.tvmaze.com/episodes/664674"
+			}
+		}
+	},
+	{
+		"id": 664693,
+		"url": "http://www.tvmaze.com/episodes/664693/fear-the-walking-dead-2x06-sicut-cervus",
+		"name": "Sicut Cervus",
+		"season": 2,
+		"number": 6,
+		"airdate": "2016-05-15",
+		"airtime": "21:00",
+		"airstamp": "2016-05-15T21:00:00-04:00",
+		"runtime": 60,
+		"image": {
+			"medium": "http://tvmazecdn.com/uploads/images/medium_landscape/58/145535.jpg",
+			"original": "http://tvmazecdn.com/uploads/images/original_untouched/58/145535.jpg"
+		},
+		"summary": "<p>Conflict erupts in a final push to Strand's destination; and Chris makes\n a decision that shakes the family. Meanwhile, Nick meets a new maternal\n figure.</p>",
+		"show": {
+			"id": 1824,
+			"url": "http://www.tvmaze.com/shows/1824/fear-the-walking-dead",
+			"name": "Fear the Walking Dead",
+			"type": "Scripted",
+			"language": "English",
+			"genres": [
+				"Drama",
+				"Action",
+				"Horror",
+				"Thriller"
+			],
+			"status": "Running",
+			"runtime": 60,
+			"premiered": "2015-08-23",
+			"schedule": {
+				"time": "21:00",
+				"days": [
+					"Sunday"
+				]
+			},
+			"rating": {
+				"average": 7.5
+			},
+			"weight": 43,
+			"network": {
+				"id": 20,
+				"name": "AMC",
+				"country": {
+					"name": "United States",
+					"code": "US",
+					"timezone": "America/New_York"
+				}
+			},
+			"webChannel": null,
+			"externals": {
+				"tvrage": 48384,
+				"thetvdb": 290853,
+				"imdb": "tt3743822"
+			},
+			"image": {
+				"medium": "http://tvmazecdn.com/uploads/images/medium_portrait/67/167812.jpg",
+				"original": "http://tvmazecdn.com/uploads/images/original_untouched/67/167812.jpg"
+			},
+			"summary": "<p>What did the world look like as it was transforming into the horrifying apocalypse depicted in The Walking Dead? This summer, AMC will answer that question with <em>Fear the Walking Dead</em>, an all-new original series set in Los Angeles, following new characters as they face the beginning of the end of the world.</p>",
+			"updated": 1473426237,
+			"_links": {
+				"self": {
+					"href": "http://api.tvmaze.com/shows/1824"
+				},
+				"previousepisode": {
+					"href": "http://api.tvmaze.com/episodes/892406"
+				},
+				"nextepisode": {
+					"href": "http://api.tvmaze.com/episodes/892407"
+				}
+			}
+		},
+		"_links": {
+			"self": {
+				"href": "http://api.tvmaze.com/episodes/664693"
+			}
+		}
+	},
+	{
+		"id": 500595,
+		"url": "http://www.tvmaze.com/episodes/500595/shameless-6x03-the-f-word",
+		"name": "The F Word",
+		"season": 6,
+		"number": 3,
+		"airdate": "2016-01-24",
+		"airtime": "21:00",
+		"airstamp": "2016-01-24T21:00:00-05:00",
+		"runtime": 60,
+		"image": {
+			"medium": "http://tvmazecdn.com/uploads/images/medium_landscape/41/102697.jpg",
+			"original": "http://tvmazecdn.com/uploads/images/original_untouched/41/102697.jpg"
+		},
+		"summary": "<p>Frank teaches Debbie how to work the welfare system to her advantage. \nMeanwhile, Kevin and Veronica visit a paralyzed Yanis in the hospital \nand try to make amends, but Yanis arrives home and tries to kill the two\n Lisas with Kev's van.</p>",
+		"show": {
+			"id": 150,
+			"url": "http://www.tvmaze.com/shows/150/shameless",
+			"name": "Shameless",
+			"type": "Scripted",
+			"language": "English",
+			"genres": [
+				"Drama",
+				"Comedy"
+			],
+			"status": "Running",
+			"runtime": 60,
+			"premiered": "2011-01-09",
+			"schedule": {
+				"time": "21:00",
+				"days": [
+					"Sunday"
+				]
+			},
+			"rating": {
+				"average": 8.8
+			},
+			"weight": 7,
+			"network": {
+				"id": 9,
+				"name": "Showtime",
+				"country": {
+					"name": "United States",
+					"code": "US",
+					"timezone": "America/New_York"
+				}
+			},
+			"webChannel": null,
+			"externals": {
+				"tvrage": 25117,
+				"thetvdb": 161511,
+				"imdb": "tt1586680"
+			},
+			"image": {
+				"medium": "http://tvmazecdn.com/uploads/images/medium_portrait/45/114890.jpg",
+				"original": "http://tvmazecdn.com/uploads/images/original_untouched/45/114890.jpg"
+			},
+			"summary": "<p>Oscar-nominated William H. Macy and Emmy Rossum star in this fiercely engaging and fearlessly twisted series. Chicagoan Frank Gallagher is the proud single dad of six smart, industrious, independent kids, who without him would be... perhaps better off. When Frank's not at the bar spending what little money they have, he's passed out on the floor. But the kids have found ways to grow up in spite of him. They may not be like any family you know, but they make no apologies for being exactly who they are.</p>",
+			"updated": 1472751655,
+			"_links": {
+				"self": {
+					"href": "http://api.tvmaze.com/shows/150"
+				},
+				"previousepisode": {
+					"href": "http://api.tvmaze.com/episodes/617861"
+				},
+				"nextepisode": {
+					"href": "http://api.tvmaze.com/episodes/768057"
+				}
+			}
+		},
+		"_links": {
+			"self": {
+				"href": "http://api.tvmaze.com/episodes/500595"
+			}
+		}
+	},
+	{
+		"id": 187808,
+		"url": "http://www.tvmaze.com/episodes/187808/the-flash-2x03-family-of-rogues",
+		"name": "Family of Rogues",
+		"season": 2,
+		"number": 3,
+		"airdate": "2015-10-20",
+		"airtime": "20:00",
+		"airstamp": "2015-10-20T20:00:00-04:00",
+		"runtime": 60,
+		"image": {
+			"medium": "http://tvmazecdn.com/uploads/images/medium_landscape/24/61653.jpg",
+			"original": "http://tvmazecdn.com/uploads/images/original_untouched/24/61653.jpg"
+		},
+		"summary": "<p>Lisa Snart, aka Golden Glider, comes to the team for help when her brother Captain Cold is kidnapped. However, the Flash soon discovers that the villain is working for his father Lewis, who has some mysterious hold over him. Meanwhile, Caitlin and Jay work together to build a speed cannon so that Jay can return to Earth-2, and Joe tells Iris the truth about her mother.</p>",
+		"show": {
+			"id": 13,
+			"url": "http://www.tvmaze.com/shows/13/the-flash",
+			"name": "The Flash",
+			"type": "Scripted",
+			"language": "English",
+			"genres": [
+				"Drama",
+				"Action",
+				"Adventure",
+				"Science-Fiction"
+			],
+			"status": "Running",
+			"runtime": 60,
+			"premiered": "2014-10-07",
+			"schedule": {
+				"time": "20:00",
+				"days": [
+					"Tuesday"
+				]
+			},
+			"rating": {
+				"average": 8.3
+			},
+			"weight": 18,
+			"network": {
+				"id": 5,
+				"name": "The CW",
+				"country": {
+					"name": "United States",
+					"code": "US",
+					"timezone": "America/New_York"
+				}
+			},
+			"webChannel": null,
+			"externals": {
+				"tvrage": 36939,
+				"thetvdb": 279121,
+				"imdb": "tt3107288"
+			},
+			"image": {
+				"medium": "http://tvmazecdn.com/uploads/images/medium_portrait/63/158168.jpg",
+				"original": "http://tvmazecdn.com/uploads/images/original_untouched/63/158168.jpg"
+			},
+			"summary": "<p>After a particle accelerator causes a freak storm, CSI Investigator Barry Allen is struck by lightning and falls into a coma. Months later he awakens with the power of super speed, granting him the ability to move through Central City like an unseen guardian angel. Though initially excited by his newfound powers, Barry is shocked to discover he is not the only \"meta-human\" who was created in the wake of the accelerator explosion -- and not everyone is using their new powers for good. Barry partners with S.T.A.R. Labs and dedicates his life to protect the innocent. For now, only a few close friends and associates know that Barry is literally the fastest man alive, but it won't be long before the world learns what Barry Allen has become...<em>The Flash</em>.</p>",
+			"updated": 1473171671,
+			"_links": {
+				"self": {
+					"href": "http://api.tvmaze.com/shows/13"
+				},
+				"previousepisode": {
+					"href": "http://api.tvmaze.com/episodes/647397"
+				},
+				"nextepisode": {
+					"href": "http://api.tvmaze.com/episodes/816120"
+				}
+			}
+		},
+		"_links": {
+			"self": {
+				"href": "http://api.tvmaze.com/episodes/187808"
+			}
+		}
+	},
+	{
+		"id": 692368,
+		"url": "http://www.tvmaze.com/episodes/692368/marvels-agents-of-shield-3x19-failed-experiments",
+		"name": "Failed Experiments",
+		"season": 3,
+		"number": 19,
+		"airdate": "2016-05-03",
+		"airtime": "21:00",
+		"airstamp": "2016-05-03T21:00:00-04:00",
+		"runtime": 60,
+		"image": {
+			"medium": "http://tvmazecdn.com/uploads/images/medium_landscape/55/139325.jpg",
+			"original": "http://tvmazecdn.com/uploads/images/original_untouched/55/139325.jpg"
+		},
+		"summary": "<p>Coulson sends a strike team to eliminate Hive before he poses a danger to the world. Meanwhile, Mack tries to save Daisy, and Lincoln insists on taking the anti-toxin that Fitz-Simmons has created to defeat Hive's parasites.</p>",
+		"show": {
+			"id": 31,
+			"url": "http://www.tvmaze.com/shows/31/marvels-agents-of-shield",
+			"name": "Marvel's Agents of S.H.I.E.L.D.",
+			"type": "Scripted",
+			"language": "English",
+			"genres": [
+				"Action",
+				"Adventure",
+				"Science-Fiction"
+			],
+			"status": "Running",
+			"runtime": 60,
+			"premiered": "2013-09-24",
+			"schedule": {
+				"time": "22:00",
+				"days": [
+					"Tuesday"
+				]
+			},
+			"rating": {
+				"average": 8.1
+			},
+			"weight": 15,
+			"network": {
+				"id": 3,
+				"name": "ABC",
+				"country": {
+					"name": "United States",
+					"code": "US",
+					"timezone": "America/New_York"
+				}
+			},
+			"webChannel": null,
+			"externals": {
+				"tvrage": 32656,
+				"thetvdb": 263365,
+				"imdb": "tt2364582"
+			},
+			"image": {
+				"medium": "http://tvmazecdn.com/uploads/images/medium_portrait/47/119738.jpg",
+				"original": "http://tvmazecdn.com/uploads/images/original_untouched/47/119738.jpg"
+			},
+			"summary": "<p><em>Marvel's Agents of S.H.I.E.L.D.</em> returns for an action-packed third season, with Director Phil Coulson and Agent Daisy Johnson leading\n the charge as S.H.I.E.L.D. searches the world for more powered people \nin the aftermath of their epic battle with Jiaying and her army of \nInhumans. However, Coulson and the team soon find out that they are not \nthe only group looking for these new Inhumans.</p>",
+			"updated": 1473505368,
+			"_links": {
+				"self": {
+					"href": "http://api.tvmaze.com/shows/31"
+				},
+				"previousepisode": {
+					"href": "http://api.tvmaze.com/episodes/692371"
+				},
+				"nextepisode": {
+					"href": "http://api.tvmaze.com/episodes/848217"
+				}
+			}
+		},
+		"_links": {
+			"self": {
+				"href": "http://api.tvmaze.com/episodes/692368"
+			}
+		}
+	},
+	{
+		"id": 32186,
+		"url": "http://www.tvmaze.com/episodes/32186/sherlock-3x03-his-last-vow",
+		"name": "His Last Vow",
+		"season": 3,
+		"number": 3,
+		"airdate": "2014-01-12",
+		"airtime": "22:00",
+		"airstamp": "2014-01-12T22:00:00+00:00",
+		"runtime": 90,
+		"image": {
+			"medium": "http://tvmazecdn.com/uploads/images/medium_landscape/13/34296.jpg",
+			"original": "http://tvmazecdn.com/uploads/images/original_untouched/13/34296.jpg"
+		},
+		"summary": "<p>Learn how Conan Doyle's Victorian super-sleuth became the hit television show \"Sherlock.\"</p>",
+		"show": {
+			"id": 335,
+			"url": "http://www.tvmaze.com/shows/335/sherlock",
+			"name": "Sherlock",
+			"type": "Scripted",
+			"language": "English",
+			"genres": [
+				"Drama",
+				"Crime",
+				"Mystery"
+			],
+			"status": "Running",
+			"runtime": 90,
+			"premiered": "2010-07-25",
+			"schedule": {
+				"time": "21:00",
+				"days": [
+					"Sunday"
+				]
+			},
+			"rating": {
+				"average": 9.3
+			},
+			"weight": 5,
+			"network": {
+				"id": 12,
+				"name": "BBC One",
+				"country": {
+					"name": "United Kingdom",
+					"code": "GB",
+					"timezone": "Europe/London"
+				}
+			},
+			"webChannel": null,
+			"externals": {
+				"tvrage": 23433,
+				"thetvdb": 176941,
+				"imdb": "tt1475582"
+			},
+			"image": {
+				"medium": "http://tvmazecdn.com/uploads/images/medium_portrait/2/5311.jpg",
+				"original": "http://tvmazecdn.com/uploads/images/original_untouched/2/5311.jpg"
+			},
+			"summary": "<p>Sherlock Holmes and Dr John Watson's adventures in 21st Century London. A thrilling, funny, fast-paced contemporary reimagining of the Arthur Conan Doyle classic.</p>",
+			"updated": 1472820200,
+			"_links": {
+				"self": {
+					"href": "http://api.tvmaze.com/shows/335"
+				},
+				"previousepisode": {
+					"href": "http://api.tvmaze.com/episodes/32186"
+				}
+			}
+		},
+		"_links": {
+			"self": {
+				"href": "http://api.tvmaze.com/episodes/32186"
+			}
+		}
+	},
+	{
+		"id": 12664,
+		"url": "http://www.tvmaze.com/episodes/12664/house-of-cards-1x01-chapter-1",
+		"name": "Chapter 1",
+		"season": 1,
+		"number": 1,
+		"airdate": "2013-02-01",
+		"airtime": "",
+		"airstamp": "2013-02-01T12:00:00+00:00",
+		"runtime": 60,
+		"image": {
+			"medium": "http://tvmazecdn.com/uploads/images/medium_landscape/16/40318.jpg",
+			"original": "http://tvmazecdn.com/uploads/images/original_untouched/16/40318.jpg"
+		},
+		"summary": "<p>Allegiances are abandoned after a promise is broken in the opener of this drama, which follows a ruthless congressman and his equally ambitious wife as they navigate the corridors of power in Washington, D.C.</p>",
+		"_links": {
+			"self": {
+				"href": "http://api.tvmaze.com/episodes/12664"
+			}
+		},
+		"show": {
+			"id": 175,
+			"url": "http://www.tvmaze.com/shows/175/house-of-cards",
+			"name": "House of Cards",
+			"type": "Scripted",
+			"language": "English",
+			"genres": [
+				"Drama",
+				"Thriller"
+			],
+			"status": "Running",
+			"runtime": 60,
+			"premiered": "2013-02-01",
+			"schedule": {
+				"time": "",
+				"days": [
+					"Friday"
+				]
+			},
+			"rating": {
+				"average": 8.7
+			},
+			"weight": 4,
+			"network": null,
+			"webChannel": {
+				"id": 1,
+				"name": "Netflix",
+				"country": {
+					"name": "United States",
+					"code": "US",
+					"timezone": "America/New_York"
+				}
+			},
+			"externals": {
+				"tvrage": 27822,
+				"thetvdb": 262980,
+				"imdb": "tt1856010"
+			},
+			"image": {
+				"medium": "http://tvmazecdn.com/uploads/images/medium_portrait/0/2460.jpg",
+				"original": "http://tvmazecdn.com/uploads/images/original_untouched/0/2460.jpg"
+			},
+			"summary": "<p>A Congressman works with his equally conniving wife to exact revenge on the people who betrayed him.</p>",
+			"updated": 1464275795,
+			"_links": {
+				"self": {
+					"href": "http://api.tvmaze.com/shows/175"
+				},
+				"previousepisode": {
+					"href": "http://api.tvmaze.com/episodes/535325"
+				}
+			}
+		}
+	},
+	{
+		"id": 12665,
+		"url": "http://www.tvmaze.com/episodes/12665/house-of-cards-1x02-chapter-2",
+		"name": "Chapter 2",
+		"season": 1,
+		"number": 2,
+		"airdate": "2013-02-01",
+		"airtime": "",
+		"airstamp": "2013-02-01T12:00:00+00:00",
+		"runtime": 60,
+		"image": {
+			"medium": "http://tvmazecdn.com/uploads/images/medium_landscape/16/40319.jpg",
+			"original": "http://tvmazecdn.com/uploads/images/original_untouched/16/40319.jpg"
+		},
+		"summary": "<p>Francis attacks the White House through the media; Claire makes a cruel decision.</p>",
+		"_links": {
+			"self": {
+				"href": "http://api.tvmaze.com/episodes/12665"
+			}
+		},
+		"show": {
+			"id": 175,
+			"url": "http://www.tvmaze.com/shows/175/house-of-cards",
+			"name": "House of Cards",
+			"type": "Scripted",
+			"language": "English",
+			"genres": [
+				"Drama",
+				"Thriller"
+			],
+			"status": "Running",
+			"runtime": 60,
+			"premiered": "2013-02-01",
+			"schedule": {
+				"time": "",
+				"days": [
+					"Friday"
+				]
+			},
+			"rating": {
+				"average": 8.7
+			},
+			"weight": 4,
+			"network": null,
+			"webChannel": {
+				"id": 1,
+				"name": "Netflix",
+				"country": {
+					"name": "United States",
+					"code": "US",
+					"timezone": "America/New_York"
+				}
+			},
+			"externals": {
+				"tvrage": 27822,
+				"thetvdb": 262980,
+				"imdb": "tt1856010"
+			},
+			"image": {
+				"medium": "http://tvmazecdn.com/uploads/images/medium_portrait/0/2460.jpg",
+				"original": "http://tvmazecdn.com/uploads/images/original_untouched/0/2460.jpg"
+			},
+			"summary": "<p>A Congressman works with his equally conniving wife to exact revenge on the people who betrayed him.</p>",
+			"updated": 1464275795,
+			"_links": {
+				"self": {
+					"href": "http://api.tvmaze.com/shows/175"
+				},
+				"previousepisode": {
+					"href": "http://api.tvmaze.com/episodes/535325"
+				}
+			}
+		}
+	},
+	{
+		"id": 12666,
+		"url": "http://www.tvmaze.com/episodes/12666/house-of-cards-1x03-chapter-3",
+		"name": "Chapter 3",
+		"season": 1,
+		"number": 3,
+		"airdate": "2013-02-01",
+		"airtime": "",
+		"airstamp": "2013-02-01T12:00:00+00:00",
+		"runtime": 60,
+		"image": {
+			"medium": "http://tvmazecdn.com/uploads/images/medium_landscape/16/40320.jpg",
+			"original": "http://tvmazecdn.com/uploads/images/original_untouched/16/40320.jpg"
+		},
+		"summary": "<p>Francis deals with a crisis in his home district; Zoe experiences the politics of journalism.</p>",
+		"_links": {
+			"self": {
+				"href": "http://api.tvmaze.com/episodes/12666"
+			}
+		},
+		"show": {
+			"id": 175,
+			"url": "http://www.tvmaze.com/shows/175/house-of-cards",
+			"name": "House of Cards",
+			"type": "Scripted",
+			"language": "English",
+			"genres": [
+				"Drama",
+				"Thriller"
+			],
+			"status": "Running",
+			"runtime": 60,
+			"premiered": "2013-02-01",
+			"schedule": {
+				"time": "",
+				"days": [
+					"Friday"
+				]
+			},
+			"rating": {
+				"average": 8.7
+			},
+			"weight": 4,
+			"network": null,
+			"webChannel": {
+				"id": 1,
+				"name": "Netflix",
+				"country": {
+					"name": "United States",
+					"code": "US",
+					"timezone": "America/New_York"
+				}
+			},
+			"externals": {
+				"tvrage": 27822,
+				"thetvdb": 262980,
+				"imdb": "tt1856010"
+			},
+			"image": {
+				"medium": "http://tvmazecdn.com/uploads/images/medium_portrait/0/2460.jpg",
+				"original": "http://tvmazecdn.com/uploads/images/original_untouched/0/2460.jpg"
+			},
+			"summary": "<p>A Congressman works with his equally conniving wife to exact revenge on the people who betrayed him.</p>",
+			"updated": 1464275795,
+			"_links": {
+				"self": {
+					"href": "http://api.tvmaze.com/shows/175"
+				},
+				"previousepisode": {
+					"href": "http://api.tvmaze.com/episodes/535325"
+				}
+			}
+		}
+	}
+]

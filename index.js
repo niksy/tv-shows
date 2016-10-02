@@ -1,66 +1,94 @@
 var _ = require('lodash');
-var JSONStream = require('JSONStream');
-var through = require('through2');
-var multistream = require('multistream');
-var parse = require('./lib/parse');
-var shows = require('./tv-shows.json');
-var getShow = require('./lib/get-show');
-var getWebChannelShows = require('./lib/get-web-channel-shows');
-var getNetworkShows = require('./lib/get-network-shows');
+var Show = require('./lib/show');
+var Episode = require('./lib/episode');
+var Schedule = require('./lib/schedule');
+var Klass = require('kist-klass');
 
-function parseStream ( stream ) {
+module.exports = Klass.extend({
 
-	return stream
-		.pipe(JSONStream.parse('*'))
-		.pipe(through.obj(function ( data, enc, end ) {
-			var parsed = parse({
-				id: data.show.id,
-				title: data.show.name,
-				episode: {
-					season: data.season,
-					number: data.number,
-					title: data.name
-				}
-			}, shows);
-			_.each(parsed, function ( item ) {
-				if ( item ) {
-					this.push(item);
-				}
-			}, this);
-			end();
-		}));
+	constructor: function ( shows ) {
 
-}
+		if ( typeof shows === 'undefined' ) {
+			throw new Error('Expected a shows configuration.');
+		}
 
-module.exports = {
+		this.shows = shows.map(( show ) => { return new Show(show); });
 
-	/**
-	 * @param  {String} showId
-	 *
-	 * @return {Stream}
-	 */
-	byId: function ( showId ) {
-		return parseStream(getShow(showId));
 	},
 
 	/**
-	 * @param  {Date[]} dates
+	 * @param  {Date} date
 	 *
-	 * @return {Stream}
+	 * @return {Promise}
 	 */
-	byDate: function ( dates ) {
+	getEpisodesByDate: function ( date ) {
 
-		var compactDates = _.compact([].concat(dates));
+		var schedule;
 
-		if ( !compactDates.length ) {
-			throw new Error('Date isn’t provided.');
+		if ( typeof date === 'undefined' ) {
+			return Promise.reject('Expected a date.');
 		}
 
-		return parseStream(multistream([].concat(
-			getNetworkShows(compactDates),
-			getWebChannelShows(compactDates)
-		)));
+		schedule = new Schedule({
+			shows: this.shows,
+			date: date
+		});
+
+		return Promise.all([
+			schedule.getNetworkChannel(),
+			schedule.getWebChannel()
+		])
+			.then(( res ) => {
+				return _.flatten(res);
+			})
+			.then(( episodes ) => {
+				return episodes.map(( episode ) => {
+					var show = _.find(this.shows, { tvmazeId: episode.show.id });
+					if ( _.get(episode, 'show.name') ) {
+						show.setTitle(episode.show.name);
+					}
+					return new Episode({
+						show: show,
+						season: episode.season,
+						number: episode.number,
+						title: episode.name
+					});
+				});
+			});
+
+	},
+
+	/**
+	 * @param  {Integer} id
+	 *
+	 * @return {Promise}
+	 */
+	getEpisodesByShowId: function ( id ) {
+
+		var show;
+
+		if ( typeof id === 'undefined' || _.filter(this.shows, { tvmazeId: id }).length === 0 ) {
+			return Promise.reject('No show with provided ID.');
+		}
+
+		show = _.find(this.shows, { tvmazeId: id });
+
+		return show
+			.getEpisodes()
+			.then(( episodes ) => {
+				return episodes.map(( episode ) => {
+					if ( _.get(episode, 'show.name') ) {
+						show.setTitle(episode.show.name);
+					}
+					return new Episode({
+						show: show,
+						season: episode.season,
+						number: episode.number,
+						title: episode.name
+					});
+				});
+			});
 
 	}
 
-};
+});
