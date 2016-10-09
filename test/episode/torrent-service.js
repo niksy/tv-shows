@@ -128,6 +128,22 @@ describe('Torrent service: EZTV.ag', function () {
 
 	});
 
+	it('should return empty array if there are more than 10 results', function () {
+
+		fn.__set__('eztv', {
+			search: function () {
+				var list = require('./fixtures/eztv.json');
+				return Promise.resolve([].concat(list, list, list, list, list, list));
+			}
+		});
+
+		return fn('game of thrones s06e04 720p')
+			.then(function ( res ) {
+				assert.equal(res.length, 0);
+			});
+
+	});
+
 	it('should return empty array on rejection', function () {
 
 		fn.__set__('eztv', {
