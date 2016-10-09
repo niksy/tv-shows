@@ -6,13 +6,14 @@ var Klass = require('kist-klass');
 
 module.exports = Klass.extend({
 
-	constructor: function ( shows ) {
+	constructor: function ( shows, options ) {
 
 		if ( typeof shows === 'undefined' ) {
 			throw new Error('Expected a shows configuration.');
 		}
 
 		this.shows = shows.map(( show ) => { return new Show(show); });
+		this.options = options || {};
 
 	},
 
@@ -51,7 +52,8 @@ module.exports = Klass.extend({
 						show: show,
 						season: episode.season,
 						number: episode.number,
-						title: episode.name
+						title: episode.name,
+						subtitleLanguage: this.options.subtitleLanguage
 					});
 				});
 			});
@@ -84,7 +86,8 @@ module.exports = Klass.extend({
 						show: show,
 						season: episode.season,
 						number: episode.number,
-						title: episode.name
+						title: episode.name,
+						subtitleLanguage: this.options.subtitleLanguage
 					});
 				});
 			});

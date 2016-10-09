@@ -51,6 +51,27 @@ manager.getEpisodesByShowId(82);
 
 ## API
 
+### Manager(shows, [options])
+
+Type: `Function`
+
+#### shows
+
+Type: `Object[]`
+
+List of shows. See [show configuration](#show-configuration) for how to structure individual shows list item.
+
+#### options
+
+Type: `Object`
+
+##### subtitleLanguage
+
+Type: `Integer|String`  
+Default: `1` (English)
+
+Subtitles language. See [addic7ed-subtitles-api description](https://github.com/niksy/addic7ed-subtitles-api#language).
+
 ### manager.getEpisodesByDate(date)
 
 Returns: `Promise`
