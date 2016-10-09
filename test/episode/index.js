@@ -51,7 +51,7 @@ describe('Episode', function () {
 
 		return fn.getTorrents()
 			.then(function ( res ) {
-				assert.deepEqual(res, require('./fixtures/filtered-list.json'));
+				assert.deepEqual(res, require('./fixtures/filtered-torrent-list.json'));
 			});
 
 	});
