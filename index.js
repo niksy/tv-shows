@@ -53,7 +53,8 @@ module.exports = Klass.extend({
 						season: episode.season,
 						number: episode.number,
 						title: episode.name,
-						subtitleLanguage: this.options.subtitleLanguage
+						subtitleLanguage: this.options.subtitleLanguage,
+						quality: this.options.quality
 					});
 				});
 			});
@@ -87,7 +88,8 @@ module.exports = Klass.extend({
 						season: episode.season,
 						number: episode.number,
 						title: episode.name,
-						subtitleLanguage: this.options.subtitleLanguage
+						subtitleLanguage: this.options.subtitleLanguage,
+						quality: this.options.quality
 					});
 				});
 			});

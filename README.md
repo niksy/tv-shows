@@ -72,6 +72,13 @@ Default: `1` (English)
 
 Subtitles language. See [addic7ed-subtitles-api description](https://github.com/niksy/addic7ed-subtitles-api#language).
 
+##### quality
+
+Type: `String[]`  
+Default: `['720p']`
+
+Video quality. Used in torrent search queries.
+
 ### manager.getEpisodesByDate(date)
 
 Returns: `Promise`
