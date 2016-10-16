@@ -77,9 +77,9 @@ Subtitles language. See [addic7ed-subtitles-api description](https://github.com/
 Type: `String[]`  
 Default: `['720p']`
 
-Video quality. Used in torrent search queries.
+Video/audio quality. Used in torrent search queries.
 
-##### schedules
+##### country
 
 Type: `String[]`  
 Defulat: `['US', 'GB']`
