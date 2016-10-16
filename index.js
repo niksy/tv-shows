@@ -32,7 +32,8 @@ module.exports = Klass.extend({
 
 		schedule = new Schedule({
 			shows: this.shows,
-			date: date
+			date: date,
+			schedules: this.options.schedules
 		});
 
 		return Promise.all([

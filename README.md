@@ -79,6 +79,13 @@ Default: `['720p']`
 
 Video quality. Used in torrent search queries.
 
+##### schedules
+
+Type: `String[]`  
+Defulat: `['US', 'GB']`
+
+Countries for which schedule will be looked for.
+
 ### manager.getEpisodesByDate(date)
 
 Returns: `Promise`
