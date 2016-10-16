@@ -1,6 +1,6 @@
 {
   "name": "@niksy/tv-shows",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Personal TV shows manager.",
   "private": true,
   "main": "index.js",
