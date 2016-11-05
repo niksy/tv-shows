@@ -15,7 +15,7 @@
   "dependencies": {
     "addic7ed-subtitles-api": "^1.0.2",
     "date-fns": "^1.3.0",
-    "extratorrentapi": "^1.1.0",
+    "extratorrentapi": "^1.2.0",
     "eztv.ag": "^1.0.0",
     "got": "^6.5.0",
     "kist-klass": "^0.1.6",
