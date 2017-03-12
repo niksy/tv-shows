@@ -120,7 +120,7 @@ Returns: `Promise`
 
 Gets list of torrents for episode. Consumes APIs for several torrent trackers and sensibly sorts them:
 
-* PROPER releases are at the top
+* PROPER and REPACK releases are at the top
 * Torrents with larger number of seeds are at the top
 * Duplicate torrents (based on Magnet hash) are removed
 
