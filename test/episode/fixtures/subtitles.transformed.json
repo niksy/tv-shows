@@ -1,6 +1,32 @@
 [
 	{
 		"language": 1,
+		"version": "PROPER.HDTV.x264-KILLERS",
+		"worksWith": [],
+		"downloads": [
+			{
+				"type": "original",
+				"url": "/original/112218/18"
+			}
+		],
+		"referer": "/show/1245",
+		"description": "Resync from CtrlHD version previously uploaded by Faisal.B. This Version only works for Game.of.Thrones.S06E04.Book.of.the.Stranger.PROPER.HDTV.x264-KILLERS",
+		"stats": {
+			"edits": 0,
+			"downloads": 11963,
+			"sequences": 641
+		},
+		"corrected": true,
+		"hearingImpaired": false,
+		"uploader": {
+			"name": "TakeshiKudo",
+			"url": "/user/130682"
+		},
+		"pubDate": "2016-09-30T23:37:00.627Z",
+		"completed": true
+	},
+	{
+		"language": 1,
 		"version": "AVS",
 		"worksWith": [],
 		"downloads": [
@@ -53,32 +79,6 @@
 			"url": "/user/11400"
 		},
 		"pubDate": "2016-09-30T23:39:00.617Z",
-		"completed": true
-	},
-	{
-		"language": 1,
-		"version": "PROPER.HDTV.x264-KILLERS",
-		"worksWith": [],
-		"downloads": [
-			{
-				"type": "original",
-				"url": "/original/112218/18"
-			}
-		],
-		"referer": "/show/1245",
-		"description": "Resync from CtrlHD version previously uploaded by Faisal.B. This Version only works for Game.of.Thrones.S06E04.Book.of.the.Stranger.PROPER.HDTV.x264-KILLERS",
-		"stats": {
-			"edits": 0,
-			"downloads": 11963,
-			"sequences": 641
-		},
-		"corrected": true,
-		"hearingImpaired": false,
-		"uploader": {
-			"name": "TakeshiKudo",
-			"url": "/user/130682"
-		},
-		"pubDate": "2016-09-30T23:37:00.627Z",
 		"completed": true
 	},
 	{

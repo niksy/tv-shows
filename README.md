@@ -13,8 +13,8 @@ npm install niksy/tv-shows --save
 ## Usage
 
 ```js
-var Manager = require('@niksy/tv-shows');
-var manager = new Manager([
+const Manager = require('@niksy/tv-shows');
+const manager = new Manager([
 	{
 		title: 'Game of Thrones',
 		tvmazeId: 82,
@@ -130,6 +130,7 @@ Returns: `Promise`
 
 Gets list of subtitles from [Addic7ed.com][addic7ed] for episode. Sorts list where:
 
+* PROPER and REPACK releases are at the top
 * Entries with larger number of downloads are at the top
 
 ## Show configuration
