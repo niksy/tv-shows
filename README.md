@@ -7,7 +7,7 @@ Personal TV shows manager.
 ## Install
 
 ```sh
-npm install niksy/tv-shows --save
+npm install @niksy/tv-shows --save
 ```
 
 ## Usage
@@ -167,6 +167,6 @@ Every show is JSON object with following properties:
 MIT © [Ivan Nikolić](http://ivannikolic.com)
 
 [ci]: https://travis-ci.org/niksy/tv-shows
-[ci-img]: https://img.shields.io/travis/niksy/tv-shows.svg
+[ci-img]: https://travis-ci.org/niksy/tv-shows.svg?branch=master
 [addic7ed]: http://www.addic7ed.com/
 [tvmaze]: http://www.tvmaze.com/
