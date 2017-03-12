@@ -1,5 +1,7 @@
-var assert = require('assert');
-var Fn = require('../../lib/show');
+'use strict';
+
+const assert = require('assert');
+const Fn = require('../../lib/show');
 
 describe('Show', function () {
 
@@ -13,7 +15,7 @@ describe('Show', function () {
 
 	it('should return network show episodes', function () {
 
-		var fn = new Fn({
+		const fn = new Fn({
 			title: 'House of Cards',
 			webChannel: true,
 			tvmazeId: 175,
@@ -24,7 +26,7 @@ describe('Show', function () {
 		});
 
 		return fn.getEpisodes()
-			.then(function ( res ) {
+			.then(( res ) => {
 				assert.equal(res.length, 3);
 				assert.deepEqual(res, require('./fixtures/data.json'));
 			});
@@ -33,7 +35,7 @@ describe('Show', function () {
 
 	it('should set custom show title', function () {
 
-		var fn = new Fn({
+		const fn = new Fn({
 			title: 'House of Cards',
 			webChannel: true,
 			tvmazeId: 175,

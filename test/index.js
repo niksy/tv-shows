@@ -1,8 +1,10 @@
-var assert = require('assert');
-var _ = require('lodash');
-var networkMock = require('./helpers/network-mock');
-var Fn = require('../');
-var Episode = require('../lib/episode');
+'use strict';
+
+const assert = require('assert');
+const _ = require('lodash');
+const networkMock = require('./helpers/network-mock');
+const Fn = require('../');
+const Episode = require('../lib/episode');
 
 before(function () {
 	networkMock.setup();
@@ -24,10 +26,10 @@ describe('Manager', function () {
 
 	it('should reject if date is not present', function () {
 
-		var fn = new Fn([]);
+		const fn = new Fn([]);
 
 		return fn.getEpisodesByDate()
-			.catch(function ( err ) {
+			.catch(( err ) => {
 				assert.equal(err, 'Expected a date.');
 			});
 
@@ -35,7 +37,7 @@ describe('Manager', function () {
 
 	it('should return list of show episodes based on date', function () {
 
-		var fn = new Fn([
+		const fn = new Fn([
 			{
 				title: 'House of Cards',
 				webChannel: true,
@@ -100,8 +102,8 @@ describe('Manager', function () {
 		]);
 
 		return fn.getEpisodesByDate(new Date(2013, 1, 1))
-			.then(function ( actual ) {
-				var expected = require('./fixtures/transformed-response-get-episodes-by-date.json').map(( episode ) => {
+			.then(( actual ) => {
+				const expected = require('./fixtures/transformed-response-get-episodes-by-date.json').map(( episode ) => {
 					return new Episode({
 						show: _.find(fn.shows, { tvmazeId: episode.show.id }),
 						season: episode.season,
@@ -116,7 +118,7 @@ describe('Manager', function () {
 
 	it('should reject if show ID is not in list of desired shows', function () {
 
-		var fn = new Fn([
+		const fn = new Fn([
 			{
 				title: 'Game of Thrones',
 				tvmazeId: 82,
@@ -129,7 +131,7 @@ describe('Manager', function () {
 		]);
 
 		return fn.getEpisodesByShowId(999)
-			.catch(function ( err ) {
+			.catch(( err ) => {
 				assert.equal(err, 'No show with provided ID.');
 			});
 
@@ -137,7 +139,7 @@ describe('Manager', function () {
 
 	it('should return list of episodes based on show ID', function () {
 
-		var fn = new Fn([
+		const fn = new Fn([
 			{
 				title: 'House of Cards',
 				webChannel: true,
@@ -150,8 +152,8 @@ describe('Manager', function () {
 		]);
 
 		return fn.getEpisodesByShowId(175)
-			.then(function ( actual ) {
-				var expected = require('./show/fixtures/data.json').map(( episode ) => {
+			.then(( actual ) => {
+				const expected = require('./show/fixtures/data.json').map(( episode ) => {
 					return new Episode({
 						show: _.find(fn.shows, { tvmazeId: episode.show.id }),
 						season: episode.season,

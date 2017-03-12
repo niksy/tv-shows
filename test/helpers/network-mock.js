@@ -1,9 +1,11 @@
-var path = require('path');
-var nock = require('nock');
-var tvmaze;
+'use strict';
+
+const path = require('path');
+const nock = require('nock');
+let tvmaze;
 
 module.exports = {
-	setup: function () {
+	setup: () => {
 
 		tvmaze = nock('http://api.tvmaze.com');
 
@@ -50,7 +52,7 @@ module.exports = {
 			.replyWithFile(200, path.join(__dirname, 'fixtures/show.json'));
 
 	},
-	destroy: function () {
+	destroy: () => {
 		tvmaze.done();
 		nock.cleanAll();
 	}

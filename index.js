@@ -1,8 +1,10 @@
-var _ = require('lodash');
-var Show = require('./lib/show');
-var Episode = require('./lib/episode');
-var Schedule = require('./lib/schedule');
-var Klass = require('kist-klass');
+'use strict';
+
+const _ = require('lodash');
+const Show = require('./lib/show');
+const Episode = require('./lib/episode');
+const Schedule = require('./lib/schedule');
+const Klass = require('kist-klass');
 
 module.exports = Klass.extend({
 
@@ -24,13 +26,11 @@ module.exports = Klass.extend({
 	 */
 	getEpisodesByDate: function ( date ) {
 
-		var schedule;
-
 		if ( typeof date === 'undefined' ) {
 			return Promise.reject('Expected a date.');
 		}
 
-		schedule = new Schedule({
+		const schedule = new Schedule({
 			shows: this.shows,
 			date: date,
 			country: this.options.country
@@ -69,13 +69,11 @@ module.exports = Klass.extend({
 	 */
 	getEpisodesByShowId: function ( id ) {
 
-		var show;
-
 		if ( typeof id === 'undefined' || _.filter(this.shows, { tvmazeId: id }).length === 0 ) {
 			return Promise.reject('No show with provided ID.');
 		}
 
-		show = _.find(this.shows, { tvmazeId: id });
+		const show = _.find(this.shows, { tvmazeId: id });
 
 		return show
 			.getEpisodes()

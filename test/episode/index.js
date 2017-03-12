@@ -1,12 +1,14 @@
-var assert = require('assert');
-var rewire = require('rewire');
-var Show = require('../../lib/show');
+'use strict';
+
+const assert = require('assert');
+const proxyquire = require('proxyquire');
+const Show = require('../../lib/show');
 
 describe('Episode', function () {
 
 	it('should throw if options are not provided', function () {
 
-		var Fn = require('../../lib/episode');
+		const Fn = require('../../lib/episode');
 
 		assert.throws(function () {
 			new Fn();
@@ -16,26 +18,25 @@ describe('Episode', function () {
 
 	it('should return torrents for episode', function () {
 
-		var Fn = rewire('../../lib/episode');
-		var fn;
+		const Fn = proxyquire('../../lib/episode', {
+			'./torrent-service/leetx': () => {
+				return Promise.resolve(require('./fixtures/leetx.transformed.json'));
+			},
+			'./torrent-service/piratebay': () => {
+				return Promise.resolve(require('./fixtures/piratebay.transformed.json'));
+			},
+			'./torrent-service/extratorrent': () => {
+				return Promise.resolve(require('./fixtures/extratorrent.transformed.json'));
+			},
+			'./torrent-service/eztv': () => {
+				return Promise.resolve(require('./fixtures/eztv.transformed.json'));
+			},
+			'./torrent-service/torrentapi': () => {
+				return Promise.resolve(require('./fixtures/torrentapi.transformed.json'));
+			}
+		});
 
-		Fn.__set__('leetx', function () {
-			return Promise.resolve(require('./fixtures/leetx.transformed.json'));
-		});
-		Fn.__set__('piratebay', function () {
-			return Promise.resolve(require('./fixtures/piratebay.transformed.json'));
-		});
-		Fn.__set__('extratorrent', function () {
-			return Promise.resolve(require('./fixtures/extratorrent.transformed.json'));
-		});
-		Fn.__set__('eztv', function () {
-			return Promise.resolve(require('./fixtures/eztv.transformed.json'));
-		});
-		Fn.__set__('torrentapi', function () {
-			return Promise.resolve(require('./fixtures/torrentapi.transformed.json'));
-		});
-
-		fn = new Fn({
+		const fn = new Fn({
 			show: new Show({
 				title: 'Game of Thrones',
 				tvmazeId: 82,
@@ -50,7 +51,7 @@ describe('Episode', function () {
 		});
 
 		return fn.getTorrents()
-			.then(function ( res ) {
+			.then(( res ) => {
 				assert.deepEqual(res, require('./fixtures/filtered-torrent-list.json'));
 			});
 
@@ -58,14 +59,13 @@ describe('Episode', function () {
 
 	it('should return subtitles for episode', function () {
 
-		var Fn = rewire('../../lib/episode');
-		var fn;
-
-		Fn.__set__('subtitles', function () {
-			return Promise.resolve(require('./fixtures/subtitles.json'));
+		const Fn = proxyquire('../../lib/episode', {
+			'addic7ed-subtitles-api': () => {
+				return Promise.resolve(require('./fixtures/subtitles.json'));
+			}
 		});
 
-		fn = new Fn({
+		const fn = new Fn({
 			show: new Show({
 				title: 'Game of Thrones',
 				tvmazeId: 82,
@@ -80,7 +80,7 @@ describe('Episode', function () {
 		});
 
 		return fn.getSubtitles()
-			.then(function ( res ) {
+			.then(( res ) => {
 				assert.deepEqual(res, require('./fixtures/subtitles.transformed.json'));
 			});
 
