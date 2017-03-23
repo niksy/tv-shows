@@ -138,7 +138,7 @@ Gets list of subtitles from [Addic7ed.com][addic7ed] for episode. Sorts list whe
 Every show is JSON object with following properties:
 
 | Property | Type | Description |
-| --- | --- | --- | --- |
+| --- | --- | --- |
 | `title` | `String` | Show title. |
 | `webChannel` | `Boolean` | Is the show web channel show (e.g. Netflix production) or standard network show. |
 | `tvmazeId` | `Number` | [TVmaze][tvmaze] show ID. |
