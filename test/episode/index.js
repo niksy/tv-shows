@@ -20,10 +20,7 @@ describe('Episode', function () {
 
 		const Fn = proxyquire('../../lib/episode', {
 			'./torrent-service/leetx': () => {
-				return Promise.resolve(require('./fixtures/leetx.transformed.json'));
-			},
-			'./torrent-service/piratebay': () => {
-				return Promise.resolve(require('./fixtures/piratebay.transformed.json'));
+				return Promise.resolve([].concat(require('./fixtures/leetx.transformed.json'), require('./fixtures/piratebay.transformed.json')));
 			},
 			'./torrent-service/extratorrent': () => {
 				return Promise.resolve(require('./fixtures/extratorrent.transformed.json'));
