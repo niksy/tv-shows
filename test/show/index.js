@@ -33,7 +33,7 @@ describe('Show', function () {
 
 	});
 
-	it('should set custom show title', function () {
+	it('should sync new data with current show data', function () {
 
 		const fn = new Fn({
 			title: 'House of Cards',
@@ -45,7 +45,9 @@ describe('Show', function () {
 			]
 		});
 
-		fn.setTitle('Cards of House');
+		fn.sync({
+			title: 'Cards of House'
+		});
 		assert.equal(fn.title, 'Cards of House');
 
 	});

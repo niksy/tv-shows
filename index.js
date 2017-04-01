@@ -45,9 +45,11 @@ module.exports = Klass.extend({
 			})
 			.then(( episodes ) => {
 				return episodes.map(( episode ) => {
-					var show = _.find(this.shows, { tvmazeId: episode.show.id });
+					const show = _.find(this.shows, { tvmazeId: episode.show.id });
 					if ( _.get(episode, 'show.name') ) {
-						show.setTitle(episode.show.name);
+						show.sync({
+							title: episode.show.name
+						});
 					}
 					return new Episode({
 						show: show,
@@ -81,7 +83,9 @@ module.exports = Klass.extend({
 			.then(( episodes ) => {
 				return episodes.map(( episode ) => {
 					if ( _.get(episode, 'show.name') ) {
-						show.setTitle(episode.show.name);
+						show.sync({
+							title: episode.show.name
+						});
 					}
 					return new Episode({
 						show: show,
