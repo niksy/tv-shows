@@ -16,44 +16,6 @@ describe('Episode', function () {
 
 	});
 
-	it('should return torrents for episode', function () {
-
-		const Fn = proxyquire('../../lib/episode', {
-			'./torrent-service/leetx': () => {
-				return Promise.resolve([].concat(require('./fixtures/leetx.transformed.json'), require('./fixtures/piratebay.transformed.json')));
-			},
-			'./torrent-service/extratorrent': () => {
-				return Promise.resolve(require('./fixtures/extratorrent.transformed.json'));
-			},
-			'./torrent-service/eztv': () => {
-				return Promise.resolve(require('./fixtures/eztv.transformed.json'));
-			},
-			'./torrent-service/torrentapi': () => {
-				return Promise.resolve(require('./fixtures/torrentapi.transformed.json'));
-			}
-		});
-
-		const fn = new Fn({
-			show: new Show({
-				title: 'Game of Thrones',
-				tvmazeId: 82,
-				addic7edId: 1245,
-				searchQuery: [
-					'game of thrones',
-					'of thrones'
-				]
-			}),
-			season: 6,
-			number: 4
-		});
-
-		return fn.getTorrents()
-			.then(( res ) => {
-				assert.deepEqual(res, require('./fixtures/filtered-torrent-list.json'));
-			});
-
-	});
-
 	it('should return subtitles for episode', function () {
 
 		const Fn = proxyquire('../../lib/episode', {
@@ -80,6 +42,79 @@ describe('Episode', function () {
 			.then(( res ) => {
 				assert.deepEqual(res, require('./fixtures/subtitles.transformed.json'));
 			});
+
+	});
+
+	describe('Torrents for episode', function () {
+
+		const torrentServiceMocks = {
+			'./torrent-service/leetx': () => {
+				return Promise.resolve(require('./fixtures/leetx.transformed.json'));
+			},
+			'./torrent-service/piratebay': () => {
+				return Promise.resolve(require('./fixtures/piratebay.transformed.json'));
+			},
+			'./torrent-service/extratorrent': () => {
+				return Promise.resolve(require('./fixtures/extratorrent.transformed.json'));
+			},
+			'./torrent-service/eztv': () => {
+				return Promise.resolve(require('./fixtures/eztv.transformed.json'));
+			},
+			'./torrent-service/torrentapi': () => {
+				return Promise.resolve(require('./fixtures/torrentapi.transformed.json'));
+			}
+		};
+
+		it('should return torrents for episode', function () {
+
+			const Fn = proxyquire('../../lib/episode', torrentServiceMocks);
+
+			const fn = new Fn({
+				show: new Show({
+					title: 'Game of Thrones',
+					tvmazeId: 82,
+					addic7edId: 1245,
+					searchQuery: [
+						'game of thrones',
+						'of thrones'
+					]
+				}),
+				season: 6,
+				number: 4
+			});
+
+			return fn.getTorrents()
+				.then(( res ) => {
+					assert.deepEqual(res, require('./fixtures/filtered-torrent-list.json'));
+				});
+
+		});
+
+		it('should return torrents for episode with excluded torrent service', function () {
+
+			const Fn = proxyquire('../../lib/episode', torrentServiceMocks);
+
+			const fn = new Fn({
+				show: new Show({
+					title: 'Game of Thrones',
+					tvmazeId: 82,
+					addic7edId: 1245,
+					searchQuery: [
+						'game of thrones',
+						'of thrones'
+					]
+				}),
+				season: 6,
+				number: 4,
+				torrentService: ['leetx', 'extratorrent', 'eztv', 'torrentapi']
+			});
+
+			return fn.getTorrents()
+				.then(( res ) => {
+					assert.deepEqual(res, require('./fixtures/filtered-excluded-service-torrent-list.json'));
+				});
+
+		});
 
 	});
 

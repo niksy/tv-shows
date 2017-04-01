@@ -15,6 +15,7 @@ module.exports = {
 				country: 'US',
 				date: '2013-02-01'
 			})
+			.times(2)
 			.replyWithFile(200, path.join(__dirname, 'fixtures/us-network-shows.json'));
 
 		tvmaze
@@ -23,6 +24,7 @@ module.exports = {
 				country: 'GB',
 				date: '2013-02-01'
 			})
+			.times(2)
 			.replyWithFile(200, path.join(__dirname, 'fixtures/uk-network-shows.json'));
 
 		tvmaze
@@ -48,7 +50,7 @@ module.exports = {
 			.query({
 				embed: 'episodes'
 			})
-			.times(4)
+			.times(6)
 			.replyWithFile(200, path.join(__dirname, 'fixtures/show.json'));
 
 	},

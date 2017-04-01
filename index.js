@@ -55,7 +55,8 @@ module.exports = Klass.extend({
 						number: episode.number,
 						title: episode.name,
 						subtitleLanguage: this.options.subtitleLanguage,
-						quality: this.options.quality
+						quality: this.options.quality,
+						torrentService: Object.keys(_.omit(Episode.TORRENT_SERVICE_LIST, this.options.excludeTorrentService ? this.options.excludeTorrentService : []))
 					});
 				});
 			});
@@ -88,7 +89,8 @@ module.exports = Klass.extend({
 						number: episode.number,
 						title: episode.name,
 						subtitleLanguage: this.options.subtitleLanguage,
-						quality: this.options.quality
+						quality: this.options.quality,
+						torrentService: Object.keys(_.omit(Episode.TORRENT_SERVICE_LIST, this.options.excludeTorrentService ? this.options.excludeTorrentService : []))
 					});
 				});
 			});

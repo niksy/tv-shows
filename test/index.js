@@ -35,9 +35,30 @@ describe('Manager', function () {
 
 	});
 
-	it('should return list of show episodes based on date', function () {
+	it('should reject if show ID is not in list of desired shows', function () {
 
 		const fn = new Fn([
+			{
+				title: 'Game of Thrones',
+				tvmazeId: 82,
+				addic7edId: 1245,
+				searchQuery: [
+					'game of thrones',
+					'of thrones'
+				]
+			}
+		]);
+
+		return fn.getEpisodesByShowId(999)
+			.catch(( err ) => {
+				assert.equal(err, 'No show with provided ID.');
+			});
+
+	});
+
+	describe('By date', function () {
+
+		const data = [
 			{
 				title: 'House of Cards',
 				webChannel: true,
@@ -99,47 +120,54 @@ describe('Manager', function () {
 					'sherlock'
 				]
 			}
-		]);
+		];
 
-		return fn.getEpisodesByDate(new Date(2013, 1, 1))
-			.then(( actual ) => {
-				const expected = require('./fixtures/transformed-response-get-episodes-by-date.json').map(( episode ) => {
-					return new Episode({
-						show: _.find(fn.shows, { tvmazeId: episode.show.id }),
-						season: episode.season,
-						number: episode.number,
-						title: episode.name
+		it('should return list of show episodes based on date', function () {
+
+			const fn = new Fn(data);
+
+			return fn.getEpisodesByDate(new Date(2013, 1, 1))
+				.then(( actual ) => {
+					const expected = require('./fixtures/transformed-response-get-episodes-by-date.json').map(( episode ) => {
+						return new Episode({
+							show: _.find(fn.shows, { tvmazeId: episode.show.id }),
+							season: episode.season,
+							number: episode.number,
+							title: episode.name
+						});
 					});
+					assert.deepEqual(actual, expected);
 				});
-				assert.deepEqual(actual, expected);
+
+		});
+
+		it('should return list of show episodes based on date with excluded torrent service', function () {
+
+			const fn = new Fn(data, {
+				excludeTorrentService: ['piratebay']
 			});
+
+			return fn.getEpisodesByDate(new Date(2013, 1, 1))
+				.then(( actual ) => {
+					const expected = require('./fixtures/transformed-response-get-episodes-by-date.json').map(( episode ) => {
+						return new Episode({
+							show: _.find(fn.shows, { tvmazeId: episode.show.id }),
+							season: episode.season,
+							number: episode.number,
+							title: episode.name,
+							torrentService: ['leetx', 'extratorrent', 'eztv', 'torrentapi']
+						});
+					});
+					assert.deepEqual(actual, expected);
+				});
+
+		});
 
 	});
 
-	it('should reject if show ID is not in list of desired shows', function () {
+	describe('By show ID', function () {
 
-		const fn = new Fn([
-			{
-				title: 'Game of Thrones',
-				tvmazeId: 82,
-				addic7edId: 1245,
-				searchQuery: [
-					'game of thrones',
-					'of thrones'
-				]
-			}
-		]);
-
-		return fn.getEpisodesByShowId(999)
-			.catch(( err ) => {
-				assert.equal(err, 'No show with provided ID.');
-			});
-
-	});
-
-	it('should return list of episodes based on show ID', function () {
-
-		const fn = new Fn([
+		const data = [
 			{
 				title: 'House of Cards',
 				webChannel: true,
@@ -149,20 +177,48 @@ describe('Manager', function () {
 					'house of cards'
 				]
 			}
-		]);
+		];
 
-		return fn.getEpisodesByShowId(175)
-			.then(( actual ) => {
-				const expected = require('./show/fixtures/data.json').map(( episode ) => {
-					return new Episode({
-						show: _.find(fn.shows, { tvmazeId: episode.show.id }),
-						season: episode.season,
-						number: episode.number,
-						title: episode.name
+		it('should return list of episodes based on show ID', function () {
+
+			const fn = new Fn(data);
+
+			return fn.getEpisodesByShowId(175)
+				.then(( actual ) => {
+					const expected = require('./show/fixtures/data.json').map(( episode ) => {
+						return new Episode({
+							show: _.find(fn.shows, { tvmazeId: episode.show.id }),
+							season: episode.season,
+							number: episode.number,
+							title: episode.name
+						});
 					});
+					assert.deepEqual(actual, expected);
 				});
-				assert.deepEqual(actual, expected);
+
+		});
+
+		it('should return list of episodes based on show ID with excluded torrent service', function () {
+
+			const fn = new Fn(data, {
+				excludeTorrentService: ['piratebay']
 			});
+
+			return fn.getEpisodesByShowId(175)
+				.then(( actual ) => {
+					const expected = require('./show/fixtures/data.json').map(( episode ) => {
+						return new Episode({
+							show: _.find(fn.shows, { tvmazeId: episode.show.id }),
+							season: episode.season,
+							number: episode.number,
+							title: episode.name,
+							torrentService: ['leetx', 'extratorrent', 'eztv', 'torrentapi']
+						});
+					});
+					assert.deepEqual(actual, expected);
+				});
+
+		});
 
 	});
 

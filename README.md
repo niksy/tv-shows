@@ -79,6 +79,21 @@ Default: `['720p']`
 
 Video/audio quality. Used in torrent search queries.
 
+##### excludeTorrentService
+
+Type: `String[]`  
+Default: `[]`
+
+List of torrent services to exclude from checking. Useful when some service is down.
+
+Available values are:
+
+* `leetx`
+* `piratebay`
+* `extratorrent`
+* `eztv`
+* `torrentapi`
+
 ##### country
 
 Type: `String[]`  
