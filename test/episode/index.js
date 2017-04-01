@@ -1,8 +1,28 @@
 'use strict';
 
 const assert = require('assert');
+const _ = require('lodash');
 const proxyquire = require('proxyquire');
+const sinon = require('sinon');
 const Show = require('../../lib/show');
+
+const torrentServiceMocks = {
+	'./torrent-service/leetx': () => {
+		return Promise.resolve(require('./fixtures/leetx.transformed.json'));
+	},
+	'./torrent-service/piratebay': () => {
+		return Promise.resolve(require('./fixtures/piratebay.transformed.json'));
+	},
+	'./torrent-service/extratorrent': () => {
+		return Promise.resolve(require('./fixtures/extratorrent.transformed.json'));
+	},
+	'./torrent-service/eztv': () => {
+		return Promise.resolve(require('./fixtures/eztv.transformed.json'));
+	},
+	'./torrent-service/torrentapi': () => {
+		return Promise.resolve(require('./fixtures/torrentapi.transformed.json'));
+	}
+};
 
 describe('Episode', function () {
 
@@ -45,25 +65,38 @@ describe('Episode', function () {
 
 	});
 
-	describe('Torrents for episode', function () {
+	it('should properly resolve basic and advanced search query', function () {
 
-		const torrentServiceMocks = {
-			'./torrent-service/leetx': () => {
-				return Promise.resolve(require('./fixtures/leetx.transformed.json'));
-			},
-			'./torrent-service/piratebay': () => {
-				return Promise.resolve(require('./fixtures/piratebay.transformed.json'));
-			},
-			'./torrent-service/extratorrent': () => {
-				return Promise.resolve(require('./fixtures/extratorrent.transformed.json'));
-			},
-			'./torrent-service/eztv': () => {
-				return Promise.resolve(require('./fixtures/eztv.transformed.json'));
-			},
-			'./torrent-service/torrentapi': () => {
-				return Promise.resolve(require('./fixtures/torrentapi.transformed.json'));
-			}
-		};
+		const stub = sinon.stub();
+		const Fn = proxyquire('../../lib/episode', _.fromPairs(Object.keys(torrentServiceMocks).map(( key ) => { return [key, stub.resolves([])]; })));
+
+		const fn = new Fn({
+			show: new Show({
+				title: 'Game of Thrones',
+				tvmazeId: 82,
+				addic7edId: 1245,
+				searchQuery: [
+					'game of thrones',
+					'of thrones'
+				],
+				advancedSearchQuery: [
+					'game of thrones {{ season }} {{ episode }}'
+				]
+			}),
+			season: 6,
+			number: 4
+		});
+
+		return fn.getTorrents()
+			.then(() => {
+				assert.ok(stub.calledWith('game of thrones S06E04 720p'));
+				assert.ok(stub.calledWith('of thrones S06E04 720p'));
+				assert.ok(stub.calledWith('game of thrones 6 4 720p'));
+			});
+
+	});
+
+	describe('Torrents for episode', function () {
 
 		it('should return torrents for episode', function () {
 

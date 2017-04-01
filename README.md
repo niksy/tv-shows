@@ -159,6 +159,7 @@ Every show is JSON object with following properties:
 | `tvmazeId` | `Number` | [TVmaze][tvmaze] show ID. |
 | `addic7edId` | `Number` | [Addic7ed.com][addic7ed] show ID. |
 | `searchQuery` | `String[]` | List of search queries used to search torrent trackers. |
+| `advancedSearchQuery` | `String[]` | List of advanced search queries used to search torrent trackers. `{{ value }}` placeholders get replaced with `season` and `episode` values.  |
 
 ### Example
 
@@ -172,6 +173,9 @@ Every show is JSON object with following properties:
 		"searchQuery": [
 			"game of thrones",
 			"of thrones"
+		],
+		"advancedSearchQuery": [
+			"game of thrones {{ season }} {{ episode }}"
 		]
 	}
 ]
