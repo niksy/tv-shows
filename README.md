@@ -79,6 +79,13 @@ Default: `['720p']`
 
 Video/audio quality. Used in torrent search queries.
 
+##### country
+
+Type: `String[]`  
+Defulat: `['US', 'GB']`
+
+Countries for which schedule will be looked for.
+
 ##### excludeTorrentService
 
 Type: `String[]`  
@@ -93,13 +100,6 @@ Available values are:
 * `extratorrent`
 * `eztv`
 * `torrentapi`
-
-##### country
-
-Type: `String[]`  
-Defulat: `['US', 'GB']`
-
-Countries for which schedule will be looked for.
 
 ### manager.getEpisodesByDate(date)
 
