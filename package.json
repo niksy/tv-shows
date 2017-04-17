@@ -20,7 +20,7 @@
     "kist-klass": "^0.1.6",
     "leetxapi": "^1.1.1",
     "lodash": "^4.15.0",
-    "magnet-uri": "^5.1.4",
+    "magnet-uri": "5.1.4",
     "torrentapi-wrapper": "0.0.2",
     "tortuga": "^0.1.1"
   },
